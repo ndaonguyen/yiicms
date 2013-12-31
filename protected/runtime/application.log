@@ -1,0 +1,616 @@
+2013/12/25 06:09:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ask".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('ask')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2013/12/25 06:16:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/index')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/index
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2013/12/25 06:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/index')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/index
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2013/12/25 06:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/index')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/index
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2013/12/25 06:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/index')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/index
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2013/12/25 06:47:06 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:07 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:08 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:09 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:10 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:10 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:11 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:12 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:13 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 06:47:14 [error] [exception.CException] exception 'CException' with message 'QuestionController contains improperly nested widget tags in its view "/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php". A CActiveForm widget does not have an endWidget() call.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', NULL, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): CController->render('ask')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/25 07:11:06 [error] [php] get_class() expects parameter 1 to be object, string given (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php:467)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): QuestionController->renderInternal()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): QuestionController->renderFile()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): QuestionController->renderPartial()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(33): QuestionController->render()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): QuestionController->runAction()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): QuestionController->runActionWithFilters()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): QuestionController->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php (21)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (33)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/26 01:42:10 [error] [php] include(authenticated.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CValidator.php(186): import()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CModel.php(287): createValidator()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CModel.php(260): LoginForm->createValidators()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CModel.php(304): LoginForm->getValidators()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1414): LoginForm->isAttributeRequired()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(597): activeLabelEx()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/site/login.php(28): CActiveForm->labelEx()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): SiteController->renderFile()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/SiteController.php(98): SiteController->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): SiteController->runAction()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=site/login
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/site/login.php (28)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/SiteController.php (98)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/29 02:52:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'qa.question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `question`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (38)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/29 02:52:44 [error] [exception.CDbException] exception 'CDbException' with message 'The table "question" for active record class "Question" cannot be found in the database.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Question))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(38): CActiveRecord->__construct()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=question/ask
+---
+2013/12/29 02:57:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'qa.question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Question`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (38)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/29 02:57:16 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Question" for active record class "Question" cannot be found in the database.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Question))
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(38): CActiveRecord->__construct()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=question/ask
+---
+2013/12/29 03:48:12 [error] [php] Function split() is deprecated (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php:44)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): QuestionController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): QuestionController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): QuestionController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (44)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/29 03:49:38 [error] [php] count() expects at least 1 parameter, 0 given (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php:45)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): QuestionController->runAction()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): QuestionController->runActionWithFilters()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): QuestionController->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (45)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/29 12:59:32 [error] [exception.CException] exception 'CException' with message 'Property "QuestionController.tags" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(38): CComponent->__get('tags')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(67): CController->render('ask', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=13883219443245
+---
+2013/12/29 13:57:21 [error] [php] include(Category.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(37): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): QuestionController->renderInternal()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): QuestionController->renderFile()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): QuestionController->renderPartial()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(67): QuestionController->render()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): QuestionController->runAction()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): QuestionController->runActionWithFilters()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): QuestionController->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php (37)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (67)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/29 13:57:42 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.tag_id" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('tag_id')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(AskForm), 'tag_id')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(AskForm), 'tag_id', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(37): CActiveForm->dropDownList(Object(AskForm), 'tag_id', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(67): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=Site/index
+---
+2013/12/29 13:58:49 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.id" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('id')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(AskForm), 'id')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(AskForm), 'id', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(37): CActiveForm->dropDownList(Object(AskForm), 'id', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(67): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=Site/index
+---
+2013/12/29 13:58:50 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.id" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('id')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(AskForm), 'id')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(AskForm), 'id', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(37): CActiveForm->dropDownList(Object(AskForm), 'id', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(67): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=Site/index
+---
+2013/12/29 13:58:51 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.id" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('id')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1802): CHtml::resolveValue(Object(AskForm), 'id')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(847): CHtml::activeDropDownList(Object(AskForm), 'id', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(37): CActiveForm->dropDownList(Object(AskForm), 'id', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(67): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=Site/index
+---
+2013/12/29 16:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "addText".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(270): CController->missingAction('addText')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('addText')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/addTex...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/addText
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=question/ask
+---
+2013/12/30 02:24:17 [error] [php] Missing argument 2 for CHtml::label(), called in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php on line 37 and defined (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php:562)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): QuestionController->renderInternal()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): QuestionController->renderFile()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): QuestionController->renderPartial()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): QuestionController->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): QuestionController->runAction()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): QuestionController->runActionWithFilters()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): QuestionController->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php (37)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (62)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/30 03:30:19 [error] [php] Missing argument 1 for CActiveForm::dropDownList(), called in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php on line 30 and defined (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php:845)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): QuestionController->renderInternal()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): QuestionController->renderFile()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): QuestionController->renderPartial()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): QuestionController->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): QuestionController->runAction()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): QuestionController->runActionWithFilters()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): QuestionController->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php (62)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2013/12/30 03:42:47 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.body" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('body')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1654): CHtml::resolveValue(Object(AskForm), 'body')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(786): CHtml::activeTextArea(Object(AskForm), 'body', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(38): CActiveForm->textArea(Object(AskForm), 'body', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2013/12/30 03:42:52 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.body" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('body')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1654): CHtml::resolveValue(Object(AskForm), 'body')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(786): CHtml::activeTextArea(Object(AskForm), 'body', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(38): CActiveForm->textArea(Object(AskForm), 'body', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/30 03:43:47 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.body" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('body')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1654): CHtml::resolveValue(Object(AskForm), 'body')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(786): CHtml::activeTextArea(Object(AskForm), 'body', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(38): CActiveForm->textArea(Object(AskForm), 'body', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2013/12/30 03:43:53 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.body" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('body')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1654): CHtml::resolveValue(Object(AskForm), 'body')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(786): CHtml::activeTextArea(Object(AskForm), 'body', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(38): CActiveForm->textArea(Object(AskForm), 'body', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php
+---
+2013/12/30 03:44:23 [error] [exception.CException] exception 'CException' with message 'Property "AskForm.body" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2529): CComponent->__get('body')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1654): CHtml::resolveValue(Object(AskForm), 'body')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(786): CHtml::activeTextArea(Object(AskForm), 'body', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/question/ask.php(45): CActiveForm->textArea(Object(AskForm), 'body', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('ask', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/QuestionController.php(62): CController->render('ask', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): QuestionController->actionAsk()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('ask')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+HTTP_REFERER=http://localhost/yiiProject/index.php
+---
