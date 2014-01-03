@@ -875,3 +875,35 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/yiiProject/index.php?r=question/ask
 ---
+2014/01/02 11:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "question/ask".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2014/01/02 14:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "question/ask".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('question/ask')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiProject/index.php?r=question/ask
+---
+2014/01/02 15:40:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away. The SQL statement executed was: SHOW FULL COLUMNS FROM `matchFootball`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/utilities/Utility.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/02 16:18:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away. The SQL statement executed was: SHOW FULL COLUMNS FROM `matchFootball`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/utilities/Utility.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/02 16:53:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1310171580' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `matchFootball` (`id`, `teamA_id`, `teamB_id`, `time_match`, `league_id`, `HT`, `FT`, `status`, `minute`, `current_period`, `other`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10).
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/utilities/Utility.php (158)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/02 17:11:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away. The SQL statement executed was: SHOW FULL COLUMNS FROM `goal`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/utilities/Utility.php (149)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)

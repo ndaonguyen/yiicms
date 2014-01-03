@@ -1,5 +1,5 @@
 <?php
-class Match extends CActiveRecord
+class MatchFootball extends CActiveRecord
 {
 	public $id;
 	public $teamA_id;
