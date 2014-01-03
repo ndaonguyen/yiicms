@@ -907,3 +907,7 @@ in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/utilities/Utility.php (149)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (39)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 01:17:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away. The SQL statement executed was: SHOW FULL COLUMNS FROM `goal`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/utilities/Utility.php (149)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)

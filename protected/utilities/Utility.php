@@ -123,10 +123,11 @@ class Utility
 										if($scoreInfoChild->nodeName == "Score")
 										{
 											$scoreType = $scoreInfoChild->attributes->getNamedItem('Type')->value;
+											$valueType = $scoreInfoChild->attributes->getNamedItem('name')->value;
 											if($scoreType == "HT")
-												$match->HT = $scoreType;
+												$match->HT = $valueType;
 											else
-												$match->FT = $scoreType;
+												$match->FT = $valueType;
 										}
 										else
 										{

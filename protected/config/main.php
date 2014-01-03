@@ -59,6 +59,7 @@ return array(
 			'emulatePrepare' => true,
 			'username' => 'soccer',
 			'password' => 'a1bizssg',
+			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
 
