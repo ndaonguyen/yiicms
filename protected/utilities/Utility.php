@@ -4,6 +4,7 @@ require_once($path = Yii::app()->basePath."/models/Member.php");
 require_once($path = Yii::app()->basePath."/models/Team.php");
 require_once($path = Yii::app()->basePath."/models/Goal.php");
 require_once($path = Yii::app()->basePath."/models/League.php");
+require_once($path = Yii::app()->basePath."/models/MatchFootball.php");
 require_once($path = Yii::app()->basePath."/models/Tip.php");
 require_once($path = Yii::app()->basePath."/models/Tip_who.php");
 require_once($path = Yii::app()->basePath."/models/Favourite.php");
@@ -13,17 +14,47 @@ require_once($path = Yii::app()->basePath."/models/Vote_result.php");
 
 class Utility
 {
+	public static function deleteDataTable($modelStr)
+	{
+		if($modelStr == "Country")
+		{
+			$countries = Country::model()->findAll();
+			foreach ($countries as $country)
+				Country::model()->deleteByPk($country->id);
+		}
+		elseif($modelStr == "Team")
+		{
+			$teams = Team::model()->findAll();
+			foreach ($teams as $team)
+				Team::model()->deleteByPk($team->id);
+		}
+		elseif($modelStr == "Goal")
+		{
+			$goals = Goal::model()->findAll();
+			foreach ($goals as $goal)
+				Goal::model()->deleteByPk($goal->id);
+		}
+		elseif($modelStr == "League")
+		{
+			$leagues = League::model()->findAll();
+			foreach ($leagues as $league)
+				League::model()->deleteByPk($league->id);
+		}
+		elseif($modelStr == "Match")
+		{
+			$matches = MatchFootball::model()->findAll();
+			foreach ($matches as $match)
+				MatchFootball::model()->deleteByPk($match->id);
+		}
+		
+	}
+	
 	
 	public static function getDaysLiveURL($numDayBeforeToday, $numDayAfterToday)
 	{
 		$PARENT_URL	      = "http://xml.tbwsport.com/SportccFixtures.aspx";
 		$DATA_USER_ID	  = "266";
 		$DATA_PWD	      = "123digital321"; 
-	/*	
-		$now          = date("m/d/Y");
-		$daybeforeNow = date('m/d/Y', strtotime($now. ' - ' +$numDayBeforeToday + 'days'));
-		$dayAfterNow  = date('m/d/Y', strtotime($now. ' + ' +$numDayAfterToday  + 'days'));
-	*/
 
 		$daybeforeNow = date('m/d/Y', strtotime("-".$numDayBeforeToday." days"));
 		$dayAfterNow = date('m/d/Y', strtotime("+".$numDayAfterToday." days"));
@@ -33,24 +64,7 @@ class Utility
 		
 		return $daysUrl;
 	}
-	/*
-	public static function getDaysLiveURL(int numDayBeForeToday, int numDayAfterToday)
-	{
-		Calendar now = Calendar.getInstance();
-		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy"); 
-		now.add(Calendar.DATE, - numDayBeForeToday);
-	    String daysBeforeNow = formatter.format(now.getTime());
-	    
-	    now = Calendar.getInstance();
-	    now.add(Calendar.DATE, numDayAfterToday);
-	    String daysAfterNow = formatter.format(now.getTime());
-	    
-	    String daysUrl = CONFIG.PARENT_URL + "?sport_id=1&userID="+ CONFIG.DATA_USER_ID +"&fromDate=" + daysBeforeNow 
-	    		         + "&toDate=" + daysAfterNow+ "&pass="+ CONFIG.DATA_PWD;
-	    
-	    return daysUrl;
-	}
-	*/
+	
 	
 	public static function saveDaysRecordDb($daysUrl)
 	{

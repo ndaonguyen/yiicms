@@ -1,4 +1,6 @@
 <?php
+$path = Yii::app()->basePath."/utilities/Utility.php";
+include_once ($path);
 
 class DataController extends Controller
 {
@@ -30,12 +32,28 @@ class DataController extends Controller
 		$this->render('index');
 	}
 	
+	
+	public function actionDeleteAll()
+	{
+		try {
+			Utility::deleteDataTable("Country");
+			Utility::deleteDataTable("Team");
+			Utility::deleteDataTable("Goal");
+			Utility::deleteDataTable("League");
+			Utility::deleteDataTable("Match");
+			
+			echo "Delete Done";
+			$this->render('delete');
+		}
+		catch(Exception $e)
+		{
+			echo $e;
+		}
+	}
+	
 	public function actionToday()
 	{
 		try {
-			$path = Yii::app()->basePath."/utilities/Utility.php";
-			include_once ($path);
-			
 			$daysUrl = Utility::getDaysLiveURL(0, 0);
 			Utility::saveDaysRecordDb($daysUrl);
 			echo "Today Done";
@@ -50,10 +68,7 @@ class DataController extends Controller
 	public function actionLastDays()
 	{
 		try {
-			$path = Yii::app()->basePath."/utilities/Utility.php";
-			include_once ($path);
-				
-			$daysUrl = Utility::getDaysLiveURL(-7, 0);
+			$daysUrl = Utility::getDaysLiveURL(7, 0);
 			Utility::saveDaysRecordDb($daysUrl);
 			echo "Last Days Done";
 			$this->render('last');
@@ -67,9 +82,6 @@ class DataController extends Controller
 	public function actionNextDays()
 	{
 		try {
-			$path = Yii::app()->basePath."/utilities/Utility.php";
-			include_once ($path);
-	
 			$daysUrl = Utility::getDaysLiveURL(0, 10);
 			Utility::saveDaysRecordDb($daysUrl);
 			echo "Next Days Done";
@@ -85,10 +97,7 @@ class DataController extends Controller
 	public function actionAllDays()
 	{
 		try {
-			$path = Yii::app()->basePath."/utilities/Utility.php";
-			include_once ($path);
-	
-			$daysUrl = Utility::getDaysLiveURL(-7, 10);
+			$daysUrl = Utility::getDaysLiveURL(7, 10);
 			Utility::saveDaysRecordDb($daysUrl);
 			echo "All Days Done";
 			$this->render('all');

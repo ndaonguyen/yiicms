@@ -13,3 +13,5 @@ $this->pageTitle=Yii::app()->name;
 <?php echo CHtml::button("Next 10 days data", array("submit" => "?r=data/nextDays"))?>
 
 <?php echo CHtml::button("Read all data", array("submit" => "?r=data/allDays"))?>
+
+<?php echo CHtml::button("Delete all data", array("submit" => "?r=data/deleteAll"))?>
