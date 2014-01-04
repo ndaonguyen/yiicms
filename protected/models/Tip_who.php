@@ -3,6 +3,8 @@ class Tip_who extends CActiveRecord
 {
 	public $id;
 	public $name;
+	public $description;
+	public $other;
 	
 	public static function model($className = __CLASS__)
 	{

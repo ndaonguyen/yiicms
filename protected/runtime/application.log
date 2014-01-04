@@ -925,3 +925,225 @@ Stack trace:
 REQUEST_URI=/yiiProject/index.php?r=data/deleteAll
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/DataController.php (37)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 14:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(270): CController->missingAction('search')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tipuser/search')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=tipuser/search&0%5Bid%5D=
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/index
+---
+2014/01/03 15:16:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(270): CController->missingAction('create')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tipuser/create')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiProject/index.php?r=tipuser/create
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/index
+---
+2014/01/03 16:26:53 [error] [exception.CException] exception 'CException' with message 'Property "AddTipUserForm.description" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(2529): CComponent->__get('description')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(AddTipUserForm), 'description')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(AddTipUserForm), 'description', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/widgets/CActiveForm.php(725): CHtml::activeTextField(Object(AddTipUserForm), 'description', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tipuser/add.php(26): CActiveForm->textField(Object(AddTipUserForm), 'description')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): CController->renderPartial('add', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php(38): CController->render('add', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipuserController->actionAdd()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('add')
+#15 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tipuser/add')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiProject/index.php?r=tipuser/add
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/index
+---
+2014/01/03 16:28:25 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:28:25 [error] [exception.CException] exception 'CException' with message 'Property "AddTipUserForm.decription" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php(35): CComponent->__get('decription')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipuserController->actionAdd()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('add')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tipuser/add')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yiiProject/index.php?r=tipuser/add
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/add
+---
+2014/01/03 16:28:55 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:29:51 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:30:12 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:31:59 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:33:21 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:33:27 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:33:47 [warning] [application] Failed to set unsafe attribute "other" of "AddTipUserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:42:56 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 16:43:10 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/03 17:08:56 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:09:07 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:09:16 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:09:35 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:11:52 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:12:11 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:12:19 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:14:47 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:15:32 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:15:43 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:41:32 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:45:45 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:47:57 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:49:01 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:52:35 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:53:45 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:54:10 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:57:28 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php:793) (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CHttpRequest.php:803)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php(34): TipuserController->redirect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipuserController->actionAdd()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipuserController->runAction()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipuserController->runActionWithFilters()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipuserController->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tipuser/add
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (34)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:58:57 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:59:21 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 01:59:42 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:00:05 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:00:33 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:02:08 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:03:15 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:06:02 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:06:26 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:07:06 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (31)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=tipuser/edit".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('?r=tipuser/edit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiProject/index.php?r=?r=tipuser/edit&id=1
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/index
+---
+2014/01/04 02:30:15 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=tipuser/edit".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('?r=tipuser/edit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiProject/index.php?r=?r=tipuser/edit&id=12
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/index
+---
+2014/01/04 02:31:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "?r=tipuser/edit".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('?r=tipuser/edit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiProject/index.php?r=?r=tipuser/edit&id=1
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tipuser/index
+---
+2014/01/04 02:53:12 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (60)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 02:53:27 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (60)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
