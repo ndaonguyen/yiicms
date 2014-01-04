@@ -7,7 +7,7 @@ $this->pageTitle=Yii::app()->name;
 <h1>Welcome to Tip user</h1>
 <div>
 	<span><?php echo CHtml::textField("searchTipUser"); ?></span>
-	<span><?php echo CHtml::button("Submit", array("submit" => array("tipuser/search", array('id'=>$data->linkId)))); ?></span>
+	<span><?php echo CHtml::button("Search", array("submit" => array("tipuser/search", array('id'=>$data->linkId)))); ?></span>
 	
 	<span style="padding-left: 100px">
 		<?php echo CHtml::button("(+) Create", array("submit" => array("tipuser/add"))); ?>
