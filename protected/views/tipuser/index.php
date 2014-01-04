@@ -29,8 +29,30 @@ $this->pageTitle=Yii::app()->name;
         <td><?php echo $tip_user->description;?></td>
         <td><?php echo CHtml::link("Edit",array('tipuser/edit',
                                          'id'=>$tip_user->id)); ?></td>
-        <td><?php echo CHtml::link("Delete",array('tipuser/delete',
-                                         'id'=>$tip_user->id)); // ajax?></td>  
+        <td><?php echo CHtml::link("Delete",array('tipuser/index'),
+        		
+				        		array(
+				        				// for htmlOptions
+				        				'onclick' => ' {' . CHtml::ajax(array(
+												'data'=>array('id'=>$tip_user->id),
+												'url'=>CController::createUrl('tipuser/delete'),
+				        						'beforeSend' => 'js:function(){if(confirm("Are you sure you want to delete?"))return true;else return false;}',
+				        						'success' => "js:function(html){ alert('removed'); }")) .
+				        						'return false;}', // returning false prevents the default navigation to another url on a new page
+												)
+        			/*
+        							array('onclick' => CHtml::ajax(array(
+										  'type'=>'POST',
+										  'dataType'=>'json',
+										  'data'=>array('id'=>$tip_user->id),
+										  'url'=>CController::createUrl('tipuser/delete'),
+										  'success'=>'function(data){
+											
+											}',
+									)))
+					*/
+									); ?></td>  
+			
     </tr>
     <?php endforeach; ?>    
 </table>

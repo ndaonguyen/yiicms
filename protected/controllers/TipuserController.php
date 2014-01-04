@@ -67,6 +67,13 @@ class TipuserController extends Controller
 		}
 		$this->render('edit',array('model'=>$model,'tipUSer'=>$tipUSer));
 	}
+	
+	public function actionDelete()
+	{
+		$idTipUser = (int) $_POST['id'];
+		Tip_who::model()->deleteByPk($idTipUser);
+		
+	}
 
 	public function actionError()
 	{
