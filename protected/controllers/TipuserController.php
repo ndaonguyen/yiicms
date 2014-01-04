@@ -72,7 +72,7 @@ class TipuserController extends Controller
 	{
 		$idTipUser = (int) $_POST['id'];
 		Tip_who::model()->deleteByPk($idTipUser);
-		
+		echo CJSON::encode(array('idUser'=>$idTipUser));
 	}
 
 	public function actionError()

@@ -1147,3 +1147,18 @@ in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
 2014/01/04 02:53:27 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (60)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 03:43:54 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 03:44:11 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 03:48:04 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 03:48:19 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 03:48:32 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
