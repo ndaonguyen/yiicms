@@ -1162,3 +1162,96 @@ in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
 2014/01/04 03:48:32 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (32)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 10:13:44 [error] [exception.CException] exception 'CException' with message 'Property "MatchFootball." is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(145): CComponent->__get('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(27): CActiveRecord->__get('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(26): CController->render('index', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/index')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2014/01/04 10:16:00 [error] [exception.CException] exception 'CException' with message 'Property "MatchFootball." is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(145): CComponent->__get('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(27): CActiveRecord->__get('')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(26): CController->render('index', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/index')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=site/index
+---
+2014/01/04 10:19:04 [error] [php] Missing argument 1 for CHtml::link(), called in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php on line 30 and defined (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php:407)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(27): TipController->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (30)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (27)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 13:36:49 [error] [php] Object of class Team could not be converted to string (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php:34)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(27): TipController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (34)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (27)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/04 14:44:28 [error] [exception.CException] exception 'CException' with message 'TipController cannot find the requested view "edit".' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php:878
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): CController->renderPartial('edit', NULL, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(43): CController->render('edit')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionEdit()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('edit')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/edit')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/edit&id=1310185514
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---

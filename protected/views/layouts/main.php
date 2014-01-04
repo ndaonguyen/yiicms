@@ -29,7 +29,7 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Tip Management', 'url'=>array('/site/index')),
+				array('label'=>'Tip Management', 'url'=>array('/tip/index')),
 			//	array('label'=>'Tip - User Management', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Tip - User Management', 'url'=>array('/tipuser/index')),
 				array('label'=>'Data Management', 'url'=>array('/data/index')),

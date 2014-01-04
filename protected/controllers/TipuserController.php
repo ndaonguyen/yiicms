@@ -18,6 +18,8 @@ class TipuserController extends Controller
 		);
 	}
 
+	
+	
 	public function actionIndex()
 	{
 		$tip_users = Tip_who::model()->findAll();
