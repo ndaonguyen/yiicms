@@ -19,7 +19,7 @@ class TipForm extends CFormModel
 			array('odds', 'numerical',
 				  'integerOnly'=>true,
 			      'min'=>1,
-			      'max'=>250),
+			      'max'=>20),
 			array('tipOther', 'safe')
 		);
 	}

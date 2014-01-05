@@ -128,7 +128,19 @@ $this->pageTitle=Yii::app()->name;
 		    <td><?php $tip_who = Tip_who::model()->findByPk($tip->tip_who_id);
 		    		  echo $tip_who->name; ?></td>
 		   	<td><?php echo CHtml::link("Edit",array('tip/edit',
-                                         'id'=>$tip->id)); ?></td>
+                                         'id'=>$tip->id)); ?>
+                                         
+                <?php echo CHtml::ajaxLink(Yii::t('job','Create Job'),
+                					$this->createUrl('tip/edit'),
+                						array(
+									        'onclick'=>'$("#jobDialog").dialog("open"); return false;',
+									        'update'=>'#jobDialog'
+									        ),
+                						array('id'=>'showJobDialog'));?>
+    					<div id="jobDialog"></div>
+    		</td>
+    		
+    		
         	<td><?php echo CHtml::link("Delete",array('tip/detail',array("id"=>$tip->id)),
 				        		array(
 			        				  'onclick' => ' {' . CHtml::ajax(array(

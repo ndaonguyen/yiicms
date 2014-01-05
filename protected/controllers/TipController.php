@@ -1,5 +1,5 @@
 <?php
-
+require_once($path = Yii::app()->basePath."/models/Team.php");
 class TipController extends Controller
 {
 	/**
@@ -18,6 +18,42 @@ class TipController extends Controller
 		);
 	}
 
+	public function actionEdit() 
+	{
+	//	$matchId    = $_GET['id'];
+		$matchId    = 1310185514;
+		$match      = MatchFootball::model()->findByPk($matchId);
+		$tips       = Tip::model()->findAllByAttributes(array("match_id"=>$matchId));
+		$model      = new TipForm();
+		// Ajax Validation enabled
+	//	$this->performAjaxValidation($model);
+		// Flag to know if we will render the form or try to add
+		// new jon.
+		$flag=true;
+		if(isset($_POST['TipForm']))
+		{       
+			$flag=false;
+			$model->attributes=$_POST['TipForm'];
+	
+			if($model->save()) 
+			{
+				$i = 0;
+				//Return an <option> and select it
+/*
+				echo CHtml::tag('option',array (
+							'value'=>$model->jid,
+							'selected'=>true
+				),CHtml::encode($model->jdescr),true);
+	*/
+			}
+		}
+		if($flag) 
+		{
+		//	Yii::app()->clientScript->scriptMap['jquery.js'] = false;
+			$this->renderPartial('createDialog',array("match"=>$match, "tips"=>$tips, 'model'=>$model,),false,true);
+		}
+	}
+	
 	public function actionIndex()
 	{
 		try {
