@@ -3,6 +3,7 @@
 class TipForm extends CFormModel
 {
 	public $tip;
+	public $tipOther;
 	public $odds;
 	public $tip_who_id;
 	/**
@@ -15,6 +16,11 @@ class TipForm extends CFormModel
 		return array(
 			// username and password are required
 			array('tip, odds, tip_who_id', 'required'),
+			array('odds', 'numerical',
+				  'integerOnly'=>true,
+			      'min'=>1,
+			      'max'=>250),
+			array('tipOther', 'safe')
 		);
 	}
 }
