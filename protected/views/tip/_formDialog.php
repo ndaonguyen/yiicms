@@ -2,7 +2,7 @@
  
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'job-form',
-    'enableAjaxValidation'=>true,
+    'enableAjaxValidation'=>false,
 )); 
 //I have enableAjaxValidation set to true so i can validate on the fly the
 ?>
@@ -57,15 +57,11 @@
         								CHtml::normalizeUrl(array('tip/edit','render'=>false)),
         								array('success'=>'js: function(data) 
 														{
-        										/*
-									                        $("#Person_jid").append(data);
 									                        $("#jobDialog").dialog("close");
-        										*/
-        														alert("hehe");
+        													alert("hehe");
                     									}'),
         								array('id'=>'closeJobDialog')); ?>
     </div>
  
 <?php $this->endWidget(); ?>
- 
 </div>

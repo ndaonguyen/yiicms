@@ -131,7 +131,7 @@ $this->pageTitle=Yii::app()->name;
                                          'id'=>$tip->id)); ?>
                                          
                 <?php echo CHtml::ajaxLink(Yii::t('job','Create Job'),
-                					$this->createUrl('tip/edit'),
+                						$this->createUrl('tip/edit'),
                 						array(
 									        'onclick'=>'$("#jobDialog").dialog("open"); return false;',
 									        'update'=>'#jobDialog'

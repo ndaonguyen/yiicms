@@ -10,5 +10,6 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
                 ),
                 ));
 echo $this->renderPartial('_formDialog', array('model'=>$model, "tips"=>$tips, "match"=>$match),false,true); 
+Yii::app()->end();
 ?>
 <?php $this->endWidget('zii.widgets.jui.CJuiDialog');?>

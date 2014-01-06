@@ -34,23 +34,24 @@ class TipController extends Controller
 		{       
 			$flag=false;
 			$model->attributes=$_POST['TipForm'];
-	
+/*	
 			if($model->save()) 
 			{
 				$i = 0;
 				//Return an <option> and select it
-/*
 				echo CHtml::tag('option',array (
 							'value'=>$model->jid,
 							'selected'=>true
 				),CHtml::encode($model->jdescr),true);
-	*/
 			}
+*/
 		}
 		if($flag) 
 		{
-		//	Yii::app()->clientScript->scriptMap['jquery.js'] = false;
+			Yii::app()->clientScript->scriptMap['jquery.js'] = false;
+//			Yii::app()->clientScript->scriptMap['jquery-ui.min.js'] = false;
 			$this->renderPartial('createDialog',array("match"=>$match, "tips"=>$tips, 'model'=>$model,),false,true);
+			Yii::app()->end();
 		}
 	}
 	
