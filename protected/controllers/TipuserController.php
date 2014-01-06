@@ -17,8 +17,6 @@ class TipuserController extends Controller
 			),
 		);
 	}
-
-	
 	
 	public function actionIndex()
 	{
@@ -50,7 +48,6 @@ class TipuserController extends Controller
 		}
 		$this->render('add',array('model'=>$model));
 	}
-	
 	
 	public function actionEdit()
 	{

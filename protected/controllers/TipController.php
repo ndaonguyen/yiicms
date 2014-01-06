@@ -60,8 +60,8 @@ class TipController extends Controller
 					'oddNew'=>$oddNew,
 					"tipWhoNew"=>$tip_who_str,
 			));
-	//		Yii::app()->end();
 		}
+		
 		if($flag) 
 		{
 			$matchId    = $_POST['match_id'];
@@ -74,7 +74,6 @@ class TipController extends Controller
 			Yii::app()->clientScript->scriptMap['jquery.js'] = false;
 			$this->renderPartial('createDialog',array("match"=>$match, 'choosenTip'=>$choosenTip,
 													  "activeTipId" => $activeTipId, 'model'=>$model,),false,true);
-			Yii::app()->end();
 		}
 	}
 	
@@ -123,7 +122,7 @@ class TipController extends Controller
 			$tipInsert->match_id   = $matchId;
 			$tipInsert->tip_who_id = $model->tip_who_id;
 		
-			$tipInsert->odds = $oddGet;
+			$tipInsert->odds =  $model->odds;
 			$tipInsert->save();
 			$tips       = Tip::model()->findAllByAttributes(array("match_id"=>$matchId));
 		}
@@ -137,8 +136,6 @@ class TipController extends Controller
 		$wholeOddEx = $odd." or ".$oddExp[0]."/".$oddExp[1];
 		return $wholeOddEx;
 	}
-	
-	
 	
 	public function actionError()
 	{

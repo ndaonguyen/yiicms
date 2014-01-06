@@ -127,10 +127,8 @@ $this->pageTitle=Yii::app()->name;
 		    <td id = "<?php echo $tip->id.'1'; ?>"><?php echo Utility::getOddsStr($tip->odds); ?></td>
 		    <td id = "<?php echo $tip->id.'2'; ?>"><?php $tip_who = Tip_who::model()->findByPk($tip->tip_who_id);
 		    		  echo $tip_who->name; ?></td>
-		   	<td><?php echo CHtml::link("Edit",array('tip/edit',
-                                         'id'=>$tip->id)); ?>
-                                         
-                <?php echo CHtml::ajaxLink(Yii::t('tip','Update Tip'),
+		   	<td>
+                <?php echo CHtml::ajaxLink(Yii::t('tip','Update'),
                 						$this->createUrl('tip/edit'),
                 						array(
 									        'onclick'=>'$("#tipDialog").dialog("open"); return false;',

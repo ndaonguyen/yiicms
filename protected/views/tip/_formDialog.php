@@ -75,7 +75,10 @@
         													document.getElementById(tipIndex1).innerHTML= dataget.oddNew;
         													document.getElementById(tipIndex2).innerHTML= dataget.tipWhoNew;
         										
-        										 			$("#tipDialog1").dialog("close");
+        													//remove dialog html
+        													$("#tipDialog1").dialog("close");
+        													var row = document.getElementById("tipDialog1");
+															row.parentElement.removeChild(row); 
                     									}'),
         								array('id'=>'closeJobDialog')); ?>
     </div>
