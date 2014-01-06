@@ -123,9 +123,9 @@ $this->pageTitle=Yii::app()->name;
 		{
 ?>
 		<tr id = "<?php echo $tip->id; ?>">
-			<td><?php echo $tip->tip; ?></td>
-		    <td><?php echo Utility::getOddsStr($tip->odds); ?></td>
-		    <td><?php $tip_who = Tip_who::model()->findByPk($tip->tip_who_id);
+			<td id = "<?php echo $tip->id.'0'; ?>"><?php echo $tip->tip; ?></td>
+		    <td id = "<?php echo $tip->id.'1'; ?>"><?php echo Utility::getOddsStr($tip->odds); ?></td>
+		    <td id = "<?php echo $tip->id.'2'; ?>"><?php $tip_who = Tip_who::model()->findByPk($tip->tip_who_id);
 		    		  echo $tip_who->name; ?></td>
 		   	<td><?php echo CHtml::link("Edit",array('tip/edit',
                                          'id'=>$tip->id)); ?>

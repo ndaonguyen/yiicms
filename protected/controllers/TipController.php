@@ -23,29 +23,50 @@ class TipController extends Controller
 
 	public function actionEdit() 
 	{
-		$matchId    = $_POST['match_id'];
-		$tipId      = $_POST['tip_id'];
 		$model      = new TipForm();
 		$flag=true;
 		if(isset($_POST['TipForm']))
 		{       
 			$flag=false;
 			$model->attributes=$_POST['TipForm'];
-			echo CJSON::encode(array('idUser'=>1));
-/*	
-			if($model->save()) 
+			$tip_id  = $model->tip_id;
+			
+			$tipStrInsert = "";
+			$tip     = $model->tip;
+			if($tip == '0')
 			{
-				$i = 0;
-				//Return an <option> and select it
-				echo CHtml::tag('option',array (
-							'value'=>$model->jid,
-							'selected'=>true
-				),CHtml::encode($model->jdescr),true);
+				$tipStrInsert = $model->tipOther;
 			}
-*/
+			else
+			{
+				$teamTip = Team::model()->findByPk($tip);
+				$tipStrInsert    = $teamTip->name;
+			}
+			
+			Tip::model()->updateByPk($tip_id, array('tip' => $tipStrInsert, 'odds' => $model->odds, 'tip_who_id' => $model->tip_who_id));
+			
+			//pass new data for updating view
+			$tipUpdate = Tip::model()->findByPk($model->tip_id);
+			$tipNew    = $tipUpdate->tip;
+			$oddNew    = Utility::getOddsStr($tipUpdate->odds);
+			$tip_who   = Tip_who::model()->findByPk($tipUpdate->tip_who_id);
+			$tip_who_str = $tip_who->name;
+			
+			
+			echo CJSON::encode(array(
+					'status'=>'success',
+					'tipId' =>$tipUpdate->id,
+					'tipNew'=>$tipNew,
+					'oddNew'=>$oddNew,
+					"tipWhoNew"=>$tip_who_str,
+			));
+	//		Yii::app()->end();
 		}
 		if($flag) 
 		{
+			$matchId    = $_POST['match_id'];
+			$tipId      = $_POST['tip_id'];
+			
 			$match      = MatchFootball::model()->findByPk($matchId);
 			$choosenTip = Tip::model()->findByPk($tipId);
 			$activeTipId= $this->getActiveTipMatchId($choosenTip, $match);

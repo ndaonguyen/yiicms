@@ -56,13 +56,26 @@
 			<?php echo $form->error($model,'tip_who_id'); ?>
 		</div>
  
+ 	<?php echo $form->hiddenField($model,'match_id',array('value'=> $choosenTip->match_id)) ?>
+ 	<?php echo $form->hiddenField($model,'tip_id',array('value'  => $choosenTip->id)) ?>
+ 
     <div class="row buttons">
         <?php echo CHtml::ajaxSubmitButton(Yii::t('job','Update Tip'),
         								CHtml::normalizeUrl(array('tip/edit','render'=>false)),
-        								array('success'=>'js: function(data) 
+        								array(
+												'type'     =>'POST',
+       											'dataType' =>'json',
+												'success'=>'function(dataget) 
 														{
-									                        $("#tipDialog").dialog("close");
-        													alert(data.idUser);
+        													var tipIndex0 = dataget.tipId + "0";
+        													var tipIndex1 = dataget.tipId + "1";
+        													var tipIndex2 = dataget.tipId + "2";
+        										
+        													document.getElementById(tipIndex0).innerHTML= dataget.tipNew;
+        													document.getElementById(tipIndex1).innerHTML= dataget.oddNew;
+        													document.getElementById(tipIndex2).innerHTML= dataget.tipWhoNew;
+        										
+        										 			$("#tipDialog1").dialog("close");
                     									}'),
         								array('id'=>'closeJobDialog')); ?>
     </div>

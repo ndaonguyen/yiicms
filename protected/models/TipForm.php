@@ -6,6 +6,9 @@ class TipForm extends CFormModel
 	public $tipOther;
 	public $odds;
 	public $tip_who_id;
+	
+	public $match_id;
+	public $tip_id;
 	/**
 	 * Declares the validation rules.
 	 * The rules state that username and password are required,
@@ -20,7 +23,7 @@ class TipForm extends CFormModel
 				  'integerOnly'=>true,
 			      'min'=>1,
 			      'max'=>50),
-			array('tipOther', 'safe')
+			array('tipOther, match_id, tip_id', 'safe')
 		);
 	}
 }

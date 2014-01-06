@@ -1,6 +1,6 @@
 <?php 
 $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
-                'id'=>'tipDialog',
+                'id'=>'tipDialog1',
                 'options'=>array(
                     'title'=>Yii::t('tip','Update Tip'),
                     'autoOpen'=>true,
@@ -11,6 +11,6 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
                 ));
 echo $this->renderPartial('_formDialog', array("match"=>$match, 'choosenTip'=>$choosenTip,
 													  "activeTipId" => $activeTipId, 'model'=>$model,),false,true); 
-Yii::app()->end();
+//Yii::app()->end();
 ?>
 <?php $this->endWidget('zii.widgets.jui.CJuiDialog');?>
