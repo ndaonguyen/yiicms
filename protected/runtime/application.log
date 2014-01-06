@@ -2136,3 +2136,97 @@ Stack trace:
 REQUEST_URI=/yiiProject/index.php?r=tip/detail&render=
 HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/detail&id=1310185514
 ---
+2014/01/06 14:43:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (87)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 14:57:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE :2014-01-06.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (91)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 14:58:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE :2014-01-06.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (92)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 14:58:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE :2014-01-06.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (92)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 14:58:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE :2014-01-06.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (92)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 14:59:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (92)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 14:59:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (92)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 15:00:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (91)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 15:00:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (91)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 15:00:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (91)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 15:01:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (91)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 15:02:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%2014-01-06%' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.time_match LIKE %2014-01-06%.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (92)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 17:02:19 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(62): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(88): TipController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (62)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+2014/01/06 17:02:33 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(105): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionFilter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/filter
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (105)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/06 17:03:39 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(62): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(88): TipController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (62)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)

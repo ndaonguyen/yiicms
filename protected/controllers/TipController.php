@@ -79,15 +79,32 @@ class TipController extends Controller
 	
 	public function actionIndex()
 	{
-		try {
-		$matches = MatchFootball::model()->findAll();
-		$this->render('index', array("matches"=>$matches));
+		try 
+		{
+			$today  = date('Y-m-d');
+			$matches = MatchFootball::model()->findAll(array(
+														    'condition' => "t.time_match LIKE '%".$today."%'",
+														));
+			$this->render('index', array("matches"=>$matches));
 		}
 		catch (Exception $e)
 		{
 			echo $e;
 		}
 	}
+	
+	
+	public function actionFilter()
+	{
+		$numDayBeforeToday = 1;
+		$tomorrow = date('Y-m-d', strtotime("+".$numDayBeforeToday." days"));
+//		$today   = date('Y-m-d');
+		$matchesFilter = MatchFootball::model()->findAll(array(
+				'condition' => "t.time_match LIKE '%".$tomorrow."%'",
+		));
+		$this->renderPartial('filterMatches',array("matchesFilter"=>$matchesFilter),false,true);
+	}
+	
 	
 	public function actionDelete()
 	{
