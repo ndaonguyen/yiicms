@@ -20,13 +20,7 @@ class TipController extends Controller
 
 	public function actionEdit() 
 	{
-		$matchId    = $_POST['match_id'];
-		$tipId      = $_POST['tip_id'];
-//		$matchId    = 1310185514;
-		$match      = MatchFootball::model()->findByPk($matchId);
-		$tips       = Tip::model()->findAllByAttributes(array("match_id"=>$matchId));
 		$model      = new TipForm();
-
 		$flag=true;
 		if(isset($_POST['TipForm']))
 		{       
@@ -46,9 +40,16 @@ class TipController extends Controller
 		}
 		if($flag) 
 		{
+			$matchId    = $_POST['match_id'];
+			$tipId      = $_POST['tip_id'];
+			$match      = MatchFootball::model()->findByPk($matchId);
+			
+			$activeTipId= $this->getActiveTipMatchId($tipId, $match);
+			
 			Yii::app()->clientScript->scriptMap['jquery.js'] = false;
-			$this->renderPartial('createDialog',array("match"=>$match, "tips"=>$tips, 'model'=>$model,),false,true);
-	//		Yii::app()->end();
+			$this->renderPartial('createDialog',array("match"=>$match, 'choosenTip'=>$choosenTip,
+													  "activeTipId" => $activeTipId, 'model'=>$model,),false,true);
+			Yii::app()->end();
 		}
 	}
 	
@@ -135,7 +136,25 @@ class TipController extends Controller
 		}
 	}
 	
-	
+	public function getActiveTipMatchId($tipId, $match)  // which team is win
+	{
+		$choosenTip = Tip::model()->findByPk($tipId);
+			
+		$tipActiveId= 0;
+		$tipStr     = $choosenTip->tip;
+		$teamA      = Team::model()->findByPk($match->teamA_id);
+		$teamA_name = $teamA->name;
+		
+		$teamB      = Team::model()->findByPk($match->teamB_id);
+		$teamB_name = $teamB->name;
+			
+		if($tipStr == $teamA_name)
+			$tipActiveId = $match->teamA_id;
+		else if($tipStr == $teamB_name)
+			$tipActiveId = $match->teamB_id;
+		
+		return $tipActiveId;
+	}
 
 
 }

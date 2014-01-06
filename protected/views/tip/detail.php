@@ -137,11 +137,6 @@ $this->pageTitle=Yii::app()->name;
 									        'update'=>'#tipDialog',
 											'type'=>'POST',
 											'data'=>array('match_id'=>$tip->match_id, 'tip_id' => $tip->id),
-										/*
-											'type'=>'POST',
-			                				'dataType'=>'json',
-			                				'data'=>array('match_id'=>$tip->match_id, 'tip_id' => $tip->id),
-			                			*/
 									        ));?>
     					<div id="tipDialog"></div>
     		</td>

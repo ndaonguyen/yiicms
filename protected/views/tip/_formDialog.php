@@ -24,15 +24,16 @@
 								);
 					
 					echo $form->dropDownList($model, 'tip', $listTeams + $static,
+											array('options' => array($activeTipId=>array('selected'=>true))),
 											array(
 												'onChange' => '
 																if(this.value == 0)
-																	document.getElementById("tipOfOther").style.visibility="visible";
+																	document.getElementById("tipOfOtherForm").style.visibility="visible";
 																else
-																	document.getElementById("tipOfOther").style.visibility="hidden";
+																	document.getElementById("tipOfOtherForm").style.visibility="hidden";
 																')); ?> 
 		
-		<span class="row" id="tipOfOther" style="visibility: hidden">
+		<span class="row" id="tipOfOtherForm" style="visibility: hidden">
 			<?php echo $form->textField($model, 'tipOther'); ?>	
 			<?php echo $form->error($model,'tipOther'); ?>	
 		</span>
