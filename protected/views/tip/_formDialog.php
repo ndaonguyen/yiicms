@@ -24,8 +24,8 @@
 								);
 					
 					echo $form->dropDownList($model, 'tip', $listTeams + $static,
-											array('options' => array($activeTipId=>array('selected'=>true))),
 											array(
+												'options'  => array($activeTipId=>array('selected'=>true)),
 												'onChange' => '
 																if(this.value == 0)
 																	document.getElementById("tipOfOtherForm").style.visibility="visible";
@@ -33,15 +33,17 @@
 																	document.getElementById("tipOfOtherForm").style.visibility="hidden";
 																')); ?> 
 		
-		<span class="row" id="tipOfOtherForm" style="visibility: hidden">
+		<span class="row" id="tipOfOtherForm" style="<?php if($activeTipId != 0) echo 'visibility: hidden'?> ">
+			<?php if($activeTipId == 0) { $model->tipOther = $choosenTip->tip;  } ?>
 			<?php echo $form->textField($model, 'tipOther'); ?>	
 			<?php echo $form->error($model,'tipOther'); ?>	
 		</span>
-			
+		
 			<?php echo $form->error($model,'tip'); ?>
 		</div>
 	
 		<div class="row" >
+			<?php $model->odds = $choosenTip->odds; ?>
 			<?php echo $form->labelEx($model,'odds (over 20. Number only)'); ?>
 			<?php echo $form->textField($model,'odds'); ?>
 			<?php echo $form->error($model,'odds'); ?>
@@ -49,17 +51,18 @@
 	
 		<div class="row">
 			<?php echo $form->labelEx($model,'tip_who_id'); ?>
-			<?php echo $form->dropDownList($model,'tip_who_id',  CHtml::listData(Tip_who::model()->findAll(), 'id', 'name')); ?>
+			<?php echo $form->dropDownList($model,'tip_who_id',  CHtml::listData(Tip_who::model()->findAll(), 'id', 'name'),
+											array('options'  => array($choosenTip->tip_who_id => array('selected'=>true)))); ?>
 			<?php echo $form->error($model,'tip_who_id'); ?>
 		</div>
  
     <div class="row buttons">
-        <?php echo CHtml::ajaxSubmitButton(Yii::t('job','Create Job'),
+        <?php echo CHtml::ajaxSubmitButton(Yii::t('job','Update Tip'),
         								CHtml::normalizeUrl(array('tip/edit','render'=>false)),
         								array('success'=>'js: function(data) 
 														{
 									                        $("#tipDialog").dialog("close");
-        													alert("hehe");
+        													alert(data.idUser);
                     									}'),
         								array('id'=>'closeJobDialog')); ?>
     </div>

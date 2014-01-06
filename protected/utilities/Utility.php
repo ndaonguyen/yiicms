@@ -14,6 +14,31 @@ require_once($path = Yii::app()->basePath."/models/Vote_result.php");
 
 class Utility
 {
+	
+	public static function getOddsStr($oddInt) // odd over 20
+	{
+		$odd        = 1 + $oddInt/20;
+		$oddExp     = Utility::simplify($oddInt,20);
+		$wholeOddEx = $odd." or ".$oddExp[0]."/".$oddExp[1];
+		return $wholeOddEx;
+	}
+	
+	public static function gcd($x,$y)
+	{
+		do {
+			$rest=$x%$y;
+			$x=$y;
+			$y=$rest;
+		} while($rest!==0);
+		return $x;
+	}
+	
+	public static function simplify($num,$den)
+	{
+		$g = Utility::gcd($num,$den);
+		return Array($num/$g,$den/$g);
+	}
+	
 	public static function deleteDataTable($modelStr)
 	{
 		if($modelStr == "Country")

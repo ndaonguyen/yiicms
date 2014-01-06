@@ -1,5 +1,8 @@
 <?php
 require_once($path = Yii::app()->basePath."/models/Team.php");
+require_once($path = Yii::app()->basePath."/utilities/Utility.php");
+
+
 class TipController extends Controller
 {
 	/**
@@ -20,12 +23,15 @@ class TipController extends Controller
 
 	public function actionEdit() 
 	{
+		$matchId    = $_POST['match_id'];
+		$tipId      = $_POST['tip_id'];
 		$model      = new TipForm();
 		$flag=true;
 		if(isset($_POST['TipForm']))
 		{       
 			$flag=false;
 			$model->attributes=$_POST['TipForm'];
+			echo CJSON::encode(array('idUser'=>1));
 /*	
 			if($model->save()) 
 			{
@@ -40,11 +46,9 @@ class TipController extends Controller
 		}
 		if($flag) 
 		{
-			$matchId    = $_POST['match_id'];
-			$tipId      = $_POST['tip_id'];
 			$match      = MatchFootball::model()->findByPk($matchId);
-			
-			$activeTipId= $this->getActiveTipMatchId($tipId, $match);
+			$choosenTip = Tip::model()->findByPk($tipId);
+			$activeTipId= $this->getActiveTipMatchId($choosenTip, $match);
 			
 			Yii::app()->clientScript->scriptMap['jquery.js'] = false;
 			$this->renderPartial('createDialog',array("match"=>$match, 'choosenTip'=>$choosenTip,
@@ -97,33 +101,23 @@ class TipController extends Controller
 			}
 			$tipInsert->match_id   = $matchId;
 			$tipInsert->tip_who_id = $model->tip_who_id;
-			
-			$oddGet     = $model->odds;
-			$odd        = 1 + $oddGet/20;
-			$oddExp     = $this->simplify($oddGet,20);
-			$wholeOddEx = $odd." or ".$oddExp[0]."/".$oddExp[1];
-			$tipInsert->odds = $wholeOddEx;
+		
+			$tipInsert->odds = $oddGet;
 			$tipInsert->save();
 			$tips       = Tip::model()->findAllByAttributes(array("match_id"=>$matchId));
 		}
 		$this->render('detail', array("match"=>$match, "tips"=>$tips, 'model'=>$model));
 	}
 	
-	public function gcd($x,$y)
+	public function getOddsStr($oddInt)
 	{
-		do {
-			$rest=$x%$y;
-			$x=$y;
-			$y=$rest;
-		} while($rest!==0);
-		return $x;
+		$odd        = 1 + $oddInt/20;
+		$oddExp     = $this->simplify($oddInt,20);
+		$wholeOddEx = $odd." or ".$oddExp[0]."/".$oddExp[1];
+		return $wholeOddEx;
 	}
 	
-	public function simplify($num,$den) 
-	{
-		$g = $this->gcd($num,$den);
-		return Array($num/$g,$den/$g);
-	}
+	
 	
 	public function actionError()
 	{
@@ -136,10 +130,8 @@ class TipController extends Controller
 		}
 	}
 	
-	public function getActiveTipMatchId($tipId, $match)  // which team is win
+	public function getActiveTipMatchId($choosenTip, $match)  // which team is win
 	{
-		$choosenTip = Tip::model()->findByPk($tipId);
-			
 		$tipActiveId= 0;
 		$tipStr     = $choosenTip->tip;
 		$teamA      = Team::model()->findByPk($match->teamA_id);

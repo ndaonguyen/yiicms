@@ -1978,3 +1978,23 @@ Stack trace:
 REQUEST_URI=/yiiProject/index.php?r=tip/edit&_=1388977041041
 HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/detail&id=1310185514
 ---
+2014/01/06 05:40:33 [error] [php] include(Utility.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/YiiBase.php:427)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/detail.php(127): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(85): TipController->render()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionDetail()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/detail&id=1310215228
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/detail.php (127)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (85)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
