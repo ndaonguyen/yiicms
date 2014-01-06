@@ -130,14 +130,20 @@ $this->pageTitle=Yii::app()->name;
 		   	<td><?php echo CHtml::link("Edit",array('tip/edit',
                                          'id'=>$tip->id)); ?>
                                          
-                <?php echo CHtml::ajaxLink(Yii::t('job','Create Job'),
+                <?php echo CHtml::ajaxLink(Yii::t('tip','Update Tip'),
                 						$this->createUrl('tip/edit'),
                 						array(
-									        'onclick'=>'$("#jobDialog").dialog("open"); return false;',
-									        'update'=>'#jobDialog'
-									        ),
-                						array('id'=>'showJobDialog'));?>
-    					<div id="jobDialog"></div>
+									        'onclick'=>'$("#tipDialog").dialog("open"); return false;',
+									        'update'=>'#tipDialog',
+											'type'=>'POST',
+											'data'=>array('match_id'=>$tip->match_id, 'tip_id' => $tip->id),
+										/*
+											'type'=>'POST',
+			                				'dataType'=>'json',
+			                				'data'=>array('match_id'=>$tip->match_id, 'tip_id' => $tip->id),
+			                			*/
+									        ));?>
+    					<div id="tipDialog"></div>
     		</td>
     		
     		

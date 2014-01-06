@@ -1,8 +1,8 @@
 <?php 
 $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
-                'id'=>'jobDialog',
+                'id'=>'tipDialog',
                 'options'=>array(
-                    'title'=>Yii::t('job','Create Job'),
+                    'title'=>Yii::t('tip','Update Tip'),
                     'autoOpen'=>true,
                     'modal'=>'true',
                     'width'=>'auto',
@@ -10,6 +10,6 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
                 ),
                 ));
 echo $this->renderPartial('_formDialog', array('model'=>$model, "tips"=>$tips, "match"=>$match),false,true); 
-Yii::app()->end();
+//Yii::app()->end();
 ?>
 <?php $this->endWidget('zii.widgets.jui.CJuiDialog');?>

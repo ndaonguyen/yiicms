@@ -54,6 +54,7 @@ return array(
 		),
 	*/
 		// uncomment the following to use a MySQL database
+/*
 		'db'=>array(
 			'connectionString' => 'mysql:host=50.62.209.46; port=3306;dbname=soccer_tips',
 			'emulatePrepare' => true,
@@ -62,7 +63,16 @@ return array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-
+*/
+		'db'=>array(
+				'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
+				'emulatePrepare' => true,
+				'username' => 'root',
+				'password' => '',
+				'emulatePrepare' => true,
+				'charset' => 'utf8',
+		),
+		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

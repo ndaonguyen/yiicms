@@ -20,15 +20,13 @@ class TipController extends Controller
 
 	public function actionEdit() 
 	{
-	//	$matchId    = $_GET['id'];
-		$matchId    = 1310185514;
+		$matchId    = $_POST['match_id'];
+		$tipId      = $_POST['tip_id'];
+//		$matchId    = 1310185514;
 		$match      = MatchFootball::model()->findByPk($matchId);
 		$tips       = Tip::model()->findAllByAttributes(array("match_id"=>$matchId));
 		$model      = new TipForm();
-		// Ajax Validation enabled
-	//	$this->performAjaxValidation($model);
-		// Flag to know if we will render the form or try to add
-		// new jon.
+
 		$flag=true;
 		if(isset($_POST['TipForm']))
 		{       
@@ -49,9 +47,8 @@ class TipController extends Controller
 		if($flag) 
 		{
 			Yii::app()->clientScript->scriptMap['jquery.js'] = false;
-//			Yii::app()->clientScript->scriptMap['jquery-ui.min.js'] = false;
 			$this->renderPartial('createDialog',array("match"=>$match, "tips"=>$tips, 'model'=>$model,),false,true);
-			Yii::app()->end();
+	//		Yii::app()->end();
 		}
 	}
 	
