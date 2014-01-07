@@ -64,7 +64,7 @@
         								CHtml::normalizeUrl(array('tip/edit','render'=>false)),
         								array(
 												'type'     =>'POST',
-       											'dataType' =>'json',
+       											'dataType' =>'json', //must
 												'success'=>'function(dataget) 
 														{
         													var tipIndex0 = dataget.tipId + "0";

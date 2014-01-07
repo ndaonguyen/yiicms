@@ -144,7 +144,7 @@ $this->pageTitle=Yii::app()->name;
 				        		array(
 			        				  'onclick' => ' {' . CHtml::ajax(array(
 													'type'=>'POST',
-													'dataType'=>'json',
+													'dataType'=>'json', // must
 													'data'=>array('id'=>$tip->id),
 													'url'=>CController::createUrl('tip/delete'),
 					        						'beforeSend' => 'js:function(){if(confirm("Are you sure you want to delete?"))return true;else return false;}',

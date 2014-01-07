@@ -1,7 +1,7 @@
 <?php
 require_once($path = Yii::app()->basePath."/models/Team.php");
 require_once($path = Yii::app()->basePath."/utilities/Utility.php");
-
+require_once($path = Yii::app()->basePath."/utilities/Conf.php");
 
 class TipController extends Controller
 {
@@ -43,7 +43,8 @@ class TipController extends Controller
 				$tipStrInsert    = $teamTip->name;
 			}
 			
-			Tip::model()->updateByPk($tip_id, array('tip' => $tipStrInsert, 'odds' => $model->odds, 'tip_who_id' => $model->tip_who_id));
+			Tip::model()->updateByPk($tip_id, array('tip' => $tipStrInsert, 'odds' => $model->odds, 
+													'tip_who_id' => $model->tip_who_id));
 			
 			//pass new data for updating view
 			$tipUpdate = Tip::model()->findByPk($model->tip_id);
@@ -73,7 +74,8 @@ class TipController extends Controller
 			
 			Yii::app()->clientScript->scriptMap['jquery.js'] = false;
 			$this->renderPartial('createDialog',array("match"=>$match, 'choosenTip'=>$choosenTip,
-													  "activeTipId" => $activeTipId, 'model'=>$model,),false,true);
+													  "activeTipId" => $activeTipId, 'model'=>$model,)
+													  ,false,true);
 		}
 	}
 	
@@ -81,11 +83,29 @@ class TipController extends Controller
 	{
 		try 
 		{
-			$today  = date('Y-m-d');
+			$today   = date('Y-m-d');
 			$matches = MatchFootball::model()->findAll(array(
 														    'condition' => "t.time_match LIKE '%".$today."%'",
 														));
-			$this->render('index', array("matches"=>$matches));
+			$historyDay  = Conf::$numHistoryDay;
+			$historyArray = array();
+			for($i = 1; $i <= $historyDay; $i++)
+			{
+				$dayInsertShow  = date('d/m/Y', strtotime("-".$i." days"));
+				$dayInsertValue = date('Y-m-d', strtotime("-".$i." days"));
+				$historyArray[$dayInsertValue] = $dayInsertShow;
+			}
+			
+			$upcommingDay  = Conf::$numUpCommingDay;
+			$upArray = array();
+			for($i = 2; $i <= $upcommingDay; $i++)
+			{
+				$dayInsertShow  = date('d/m/Y', strtotime("+".$i." days"));
+				$dayInsertValue = date('Y-m-d', strtotime("+".$i." days"));
+				$upArray[$dayInsertValue] = $dayInsertShow;
+			}
+			
+			$this->render('index', array("matches"=>$matches, "historyArray"=>$historyArray, "upcommingArray"=>$upArray));
 		}
 		catch (Exception $e)
 		{
@@ -96,13 +116,47 @@ class TipController extends Controller
 	
 	public function actionFilter()
 	{
-		$numDayBeforeToday = 1;
-		$tomorrow = date('Y-m-d', strtotime("+".$numDayBeforeToday." days"));
-//		$today   = date('Y-m-d');
-		$matchesFilter = MatchFootball::model()->findAll(array(
-				'condition' => "t.time_match LIKE '%".$tomorrow."%'",
-		));
-		$this->renderPartial('filterMatches',array("matchesFilter"=>$matchesFilter),false,true);
+		$dayOption = $_POST['dayOption'];
+		$dayChoose = "";
+		if($dayOption == "tomorrow")
+		{
+			$numDayBeforeToday = 1;
+			$dayChoose  = date('Y-m-d', strtotime("+".$numDayBeforeToday." days"));
+		}
+		elseif ($dayOption == "today")
+			$dayChoose  = date('Y-m-d');
+		else 
+			$dayChoose  = $dayOption;
+		
+		$matches  = MatchFootball::model()->findAll(array(
+				'condition' => "t.time_match LIKE '%".$dayChoose."%'",));
+		
+		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
+	}
+	
+	public function actionSearch()
+	{
+		$term   = $_POST['term'];
+		$teams  = Team::model()->findAll(array(
+				'condition' => "t.name LIKE '%".$term."%'"));
+		
+		$countTeam      = count($teams);
+		if($countTeam == 0)
+			return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
+			
+		$inConditionStr = "(";
+		for($i = 0; $i<$countTeam; $i++)
+		{
+			$inConditionStr = $inConditionStr.$teams[$i]->id;
+			if($i != ($countTeam-1) )
+				$inConditionStr = $inConditionStr.",";
+		}
+		$inConditionStr = $inConditionStr.")";
+		
+		$matches   = MatchFootball::model()->findAll(array(
+				'condition' => "t.teamA_id In ".$inConditionStr. " OR t.teamA_id IN ".$inConditionStr ));
+	
+		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
 	}
 	
 	
@@ -122,7 +176,8 @@ class TipController extends Controller
 		if(isset($_POST['TipForm']))
 		{
 			$model->attributes = $_POST['TipForm'];
-			if(Tip::model()->findByAttributes(array("match_id"=>$matchId, "tip_who_id"=>$model->tip_who_id)) != Null)
+			if(Tip::model()->findByAttributes(array("match_id"=>$matchId, 
+											        "tip_who_id"=>$model->tip_who_id)) != Null)
 				return $this->render('detail', array("match"=>$match, "tips"=>$tips, 'model'=>$model));
 				
 			$tipInsert = new Tip;

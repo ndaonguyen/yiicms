@@ -1,11 +1,14 @@
-<table class="dataGrid1" >
-<tr>
-<th width="80%" align="center"><?php echo Yii::t('ui','Match'); ?></th>
+<?php 
+if(count($matches) > 0)
+{
+?>
+	<table class="dataGrid1" style="width: 50%" >
+	<tr>
+		<th width="80%" align="center"><?php echo Yii::t('ui','Match'); ?></th>
         <th width="20%" align="center"><?php echo Yii::t('ui','Edit'); ?></th>
-    </tr>    
-    <?php 
-    
-    foreach($matchesFilter as $match): ?>    
+  	</tr>    
+<?php 
+    foreach($matches as $match): ?>    
     <tr id="<?php echo $match->id; ?>">
         <td>
         	<table>
@@ -34,7 +37,14 @@
         </td>
         
         <td><?php echo CHtml::link("Detail Tips",array('tip/detail',
-                                         'id'=>$match->id)); ?></td>
+                                         'id'=>$match->id)); ?>
+        </td>
     </tr>
-    <?php endforeach; ?>    
+    <?php endforeach;
+?>
 </table>
+<?php 
+}
+else 
+	echo "No match found !!";
+?>    

@@ -2230,3 +2230,272 @@ REQUEST_URI=/yiiProject/index.php?r=tip/index
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (62)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+2014/01/07 00:17:28 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(62): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(88): TipController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (62)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+2014/01/07 03:34:09 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(1351): tag()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(596): inputField()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(63): textField()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(108): TipController->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (63)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (108)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 03:34:48 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(1351): tag()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(596): inputField()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(63): textField()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(108): TipController->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (63)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (108)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 03:35:12 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(1351): tag()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php(596): inputField()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php(63): textField()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(126): require()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(108): TipController->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionIndex()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/index
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (63)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (108)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 03:37:14 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(143): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (143)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 03:38:02 [error] [php] Invalid argument supplied for foreach() (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php:8)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(148): TipController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (8)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (148)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 03:59:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.name' in 'where clause'. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.name LIKE '%Al%'.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 03:59:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.name' in 'where clause'. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.name LIKE '%Al%'' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(154): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
+2014/01/07 04:10:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ().
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 04:10:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ()' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(154): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
+2014/01/07 04:10:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ().
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 04:10:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ()' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(154): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
+2014/01/07 04:10:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ().
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 04:10:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ()' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(154): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
+2014/01/07 04:11:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ().
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 04:11:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ()' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(154): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
+2014/01/07 04:13:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ().
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (157)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 04:13:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ()' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(157): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
+2014/01/07 04:13:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ().
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (157)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/07 04:13:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR t.teamA_id IN ()' at line 1. The SQL statement executed was: SELECT * FROM `matchFootball` `t` WHERE t.teamA_id In () OR t.teamA_id IN ()' in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(157): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionSearch()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): CController->run('search')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController('tip/search')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiProject/index.php?r=tip/search
+HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
+---
