@@ -49,6 +49,15 @@ class TipuserController extends Controller
 		$this->render('add',array('model'=>$model));
 	}
 	
+	public function actionSearch()
+	{
+		$term       = $_POST['term'];
+		$tip_users  = Tip_who::model()->findAll(array(
+				'condition' => "t.name LIKE '%".$term."%'"));
+		
+		$this->renderPartial('filterUser',array("tip_users"=>$tip_users),false,true);
+	}
+	
 	public function actionEdit()
 	{
 		$model     = new TipuserForm;
