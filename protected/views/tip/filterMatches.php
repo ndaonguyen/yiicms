@@ -43,6 +43,11 @@ if(count($matches) > 0)
     <?php endforeach;
 ?>
 </table>
+
+<hr>
+<?php $this->widget('CLinkPager', array(
+    'pages' => $pages,
+)) ?>
 <?php 
 }
 else 

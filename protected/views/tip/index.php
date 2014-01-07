@@ -78,6 +78,10 @@ $this->pageTitle=Yii::app()->name;
 <hr style="width: 70%; margin-top: 10px; margin-bottom: 10px; ">
 
 <div id="datafilter">
-	<?php  $this->renderPartial('filterMatches',array('matches'=>$matches)); ?>
+	<?php  $this->renderPartial('filterMatches',array(
+												'matches'		 => $matches,
+												'pages'          => $pages,
+												"historyArray"   => $historyArray,
+												"upcommingArray" => $upArray )); ?>
 </div>
 
