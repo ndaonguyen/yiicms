@@ -1,11 +1,11 @@
 <?php
 /* @var $this SiteController */
-
+echo CHtml::link("Home", array("tip/index")). " >> ". CHtml::link("Tip-user", array("tipuser/index")). " >> Add "   ;
+echo "<br>";
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to Tip user - Add</h1>
-<div class="form">
+<div class="form"  style="padding-top:30px ">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'tipuser-form',

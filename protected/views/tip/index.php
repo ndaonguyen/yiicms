@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>List matches: </h1>
+<h3>List matches: </h3>
 
 <div style="width: 40%">
 	<div id="option" style="float: left; width: 40%">

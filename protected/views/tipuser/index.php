@@ -4,7 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to Tip user</h1>
+<h3>Welcome to Tip user</h3>
 <div>
 	<span><?php echo CHtml::textField("searchTipUser","",array('id'=>'idSearch')); ?></span>
 	<span>

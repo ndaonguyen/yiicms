@@ -1,12 +1,14 @@
+
+
 <?php
 /* @var $this SiteController */
+echo CHtml::link("Home", array("tip/index")). " >> Detail Tip"  ;
 
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Detail </h1>
 
-<div>
+<div style="padding-top:30px ">
 	<table style="width: 600px">
 		<tr>
 			<td width="30%" >

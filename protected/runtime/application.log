@@ -2519,3 +2519,21 @@ Stack trace:
 REQUEST_URI=/yiiProject/index.php?r=tipuser/index
 HTTP_REFERER=http://localhost/yiiProject/index.php?r=tip/index
 ---
+2014/01/07 05:30:24 [error] [php] Missing argument 2 for CHtml::label(), called in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/detail.php on line 5 and defined (/Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/helpers/CHtml.php:562)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CBaseController.php(95): TipController->renderInternal()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(869): TipController->renderFile()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(782): TipController->renderPartial()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php(201): TipController->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): TipController->actionDetail()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(286): TipController->runAction()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CController.php(265): TipController->runActionWithFilters()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(282): TipController->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=tip/detail&id=1310220229
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/detail.php (5)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (201)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
