@@ -15,6 +15,7 @@ class AjaxLinkTipPager extends CLinkPager
 	{
 		if($hidden || $selected)
 			$class.=' '.($hidden ? self::CSS_HIDDEN_PAGE : self::CSS_SELECTED_PAGE);
+
 		return '<li class="'.$class.'">'.CHtml::ajaxLink(Yii::t('tip',$label),
 										$this->createPageUrl($page),
 										array(

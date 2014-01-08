@@ -45,8 +45,6 @@ if(count($matches) > 0)
     <?php endforeach;
 ?>
 </table>
-
-<hr>
 <?php
 /*
 	$this->widget('application.widgets.AjaxLinkPager', array(
@@ -55,9 +53,9 @@ if(count($matches) > 0)
 	$this->widget('CLinkPager', array(
 			'pages'=>$pages,
 	));
-*/
 	$this->widget('AjaxLinkTipPager', array(
     'pages' => $pages,)) ;
+   */
 }
 else 
 	echo "No match found !!";

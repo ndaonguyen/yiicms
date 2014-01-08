@@ -81,46 +81,42 @@ class TipController extends Controller
 	
 	public function actionIndex()
 	{
-		$today    = date('Y-m-d');
-		$criteria = new CDbCriteria();
-		$criteria->condition = "time_match LIKE '%".$today."%'";
-		$count    = MatchFootball::model()->count($criteria);
-		$pages    = new CPagination($count);
-		
-		$pages->pageSize = Conf::$numItemPerDayTip;
-		$pages->applyLimit($criteria);
-		$matches = MatchFootball::model()->findAll($criteria);
-		
-		$historyDay  = Conf::$numHistoryDay;
-		$historyArray = array();
-		for($i = 1; $i <= $historyDay; $i++)
+		try 
 		{
-			$dayInsertShow  = date('d/m/Y', strtotime("-".$i." days"));
-			$dayInsertValue = date('Y-m-d', strtotime("-".$i." days"));
-			$historyArray[$dayInsertValue] = $dayInsertShow;
+			$today   = date('Y-m-d');
+			$matches = MatchFootball::model()->findAll(array(
+														    'condition' => "t.time_match LIKE '%".$today."%'",
+														));
+			$historyDay  = Conf::$numHistoryDay;
+			$historyArray = array();
+			for($i = 1; $i <= $historyDay; $i++)
+			{
+				$dayInsertShow  = date('d/m/Y', strtotime("-".$i." days"));
+				$dayInsertValue = date('Y-m-d', strtotime("-".$i." days"));
+				$historyArray[$dayInsertValue] = $dayInsertShow;
+			}
+			
+			$upcommingDay  = Conf::$numUpCommingDay;
+			$upArray = array();
+			for($i = 2; $i <= $upcommingDay; $i++)
+			{
+				$dayInsertShow  = date('d/m/Y', strtotime("+".$i." days"));
+				$dayInsertValue = date('Y-m-d', strtotime("+".$i." days"));
+				$upArray[$dayInsertValue] = $dayInsertShow;
+			}
+			
+			$this->render('index', array("matches"=>$matches, "historyArray"=>$historyArray, "upcommingArray"=>$upArray));
 		}
-		
-		$upcommingDay  = Conf::$numUpCommingDay;
-		$upArray = array();
-		for($i = 2; $i <= $upcommingDay; $i++)
+		catch (Exception $e)
 		{
-			$dayInsertShow  = date('d/m/Y', strtotime("+".$i." days"));
-			$dayInsertValue = date('Y-m-d', strtotime("+".$i." days"));
-			$upArray[$dayInsertValue] = $dayInsertShow;
+			echo $e;
 		}
-		
-		$this->render('index', array(
-				'matches'         => $matches,
-				'pages'          => $pages,
-				"historyArray"   => $historyArray,
-				"upcommingArray" => $upArray 
-		));
 	}
 	
 	
 	public function actionFilter()
 	{
-		$dayOption = $_GET['dayOption'];
+		$dayOption = $_POST['dayOption'];
 		$dayChoose = "";
 		if($dayOption == "tomorrow")
 		{
@@ -128,39 +124,25 @@ class TipController extends Controller
 			$dayChoose  = date('Y-m-d', strtotime("+".$numDayBeforeToday." days"));
 		}
 		elseif ($dayOption == "today")
-		$dayChoose  = date('Y-m-d');
-		else
+			$dayChoose  = date('Y-m-d');
+		else 
 			$dayChoose  = $dayOption;
 		
-		$criteria = new CDbCriteria();
-		$criteria->condition = "time_match LIKE '%".$dayChoose."%'";
-		$count    = MatchFootball::model()->count($criteria);
-		$pages    = new CPagination($count);
+		$matches  = MatchFootball::model()->findAll(array(
+				'condition' => "t.time_match LIKE '%".$dayChoose."%'",));
 		
-		$pages->pageSize = Conf::$numItemPerDayTip;
-		$pages->applyLimit($criteria);
-		$matches = MatchFootball::model()->findAll($criteria);
-		
-		$this->renderPartial('filterMatches', array(
-				'matches'        => $matches,
-				'pages'          => $pages,
-				),false,true);
+		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
 	}
 	
 	public function actionSearch()
 	{
-		$criteria = new CDbCriteria();
-		
-		$term   = $_GET['term'];
+		$term   = $_POST['term'];
 		$teams  = Team::model()->findAll(array(
 				'condition' => "t.name LIKE '%".$term."%'"));
 		
 		$countTeam      = count($teams);
 		if($countTeam == 0)
-			return $this->renderPartial('filterMatches', array(
-				'matches'        => array(),
-				'pages'          => Null,
-				),false,true);
+			return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
 			
 		$inConditionStr = "(";
 		for($i = 0; $i<$countTeam; $i++)
@@ -171,18 +153,10 @@ class TipController extends Controller
 		}
 		$inConditionStr = $inConditionStr.")";
 		
-		$criteria->condition = "teamA_id In ".$inConditionStr. " OR teamA_id IN ".$inConditionStr;
-		$count    = MatchFootball::model()->count($criteria);
-		$pages    = new CPagination($count);
-		
-		$pages->pageSize = Conf::$numItemPerDayTip;
-		$pages->applyLimit($criteria);
-		$matches = MatchFootball::model()->findAll($criteria);
+		$matches   = MatchFootball::model()->findAll(array(
+				'condition' => "t.teamA_id In ".$inConditionStr. " OR t.teamA_id IN ".$inConditionStr ));
 	
-		$this->renderPartial('filterMatches', array(
-				'matches'        => $matches,
-				'pages'          => $pages,
-				),false,true);
+		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
 	}
 	
 	
