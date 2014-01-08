@@ -131,6 +131,8 @@ class TipController extends Controller
 			$dayChoose  = date('Y-m-d');
 		elseif (($dayOption == "all"))
 			$dayChoose  = "";
+		else 
+			$dayChoose  = $dayOption;
 		
 		$matches  = MatchFootball::model()->findAll(array(
 				'condition' => "t.time_match LIKE '%".$dayChoose."%'",));
