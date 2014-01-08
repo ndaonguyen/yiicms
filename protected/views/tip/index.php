@@ -13,7 +13,7 @@ $this->pageTitle=Yii::app()->name;
 																		   ),
 												array(
 												'onChange'    => CHtml::ajax(array(
-													'type'    => 'POST',
+													'type'    => 'GET',
 													'data'    => array('dayOption'=>'js:this.value'),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',)))); ?></span><br>
@@ -39,7 +39,7 @@ $this->pageTitle=Yii::app()->name;
 				<?php echo CHtml::dropDownList('history', '', $historyArray,
 												array(
 												'onChange'    => CHtml::ajax(array(
-													'type'    => 'POST',
+													'type'    => 'GET',
 													'data'    => array('dayOption'=>'js:this.value'),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',))));?>
@@ -48,7 +48,7 @@ $this->pageTitle=Yii::app()->name;
 					<?php echo CHtml::dropDownList("upcomming", '', $upcommingArray,
 													array(
 												'onChange'    => CHtml::ajax(array(
-													'type'    => 'POST',
+													'type'    => 'GET',
 													'data'    => array('dayOption'=>'js:this.value'),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',)))) ?>
@@ -65,7 +65,7 @@ $this->pageTitle=Yii::app()->name;
 			<?php echo CHtml::ajaxSubmitButton(Yii::t('searchTip','Search by team'),
         								CHtml::normalizeUrl(array('tip/search')),
         								array(
-											'type'    => 'POST',
+											'type'    => 'GET',
 											'data'    => array('term'=>'js:document.getElementById("idSearch").value'),
 											'url'     => CController::createUrl('tip/search'),
 											'update'  => '#datafilter')); ?>

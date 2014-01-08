@@ -120,7 +120,7 @@ class TipController extends Controller
 	
 	public function actionFilter()
 	{
-		$dayOption = $_POST['dayOption'];
+		$dayOption = $_GET['dayOption'];
 		$dayChoose = "";
 		if($dayOption == "tomorrow")
 		{
@@ -151,7 +151,7 @@ class TipController extends Controller
 	{
 		$criteria = new CDbCriteria();
 		
-		$term   = $_POST['term'];
+		$term   = $_GET['term'];
 		$teams  = Team::model()->findAll(array(
 				'condition' => "t.name LIKE '%".$term."%'"));
 		

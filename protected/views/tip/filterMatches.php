@@ -1,4 +1,6 @@
 <?php 
+require_once($path = Yii::app()->basePath."/widgets/AjaxLinkTipPager.php");
+
 if(count($matches) > 0)
 {
 ?>
@@ -45,10 +47,17 @@ if(count($matches) > 0)
 </table>
 
 <hr>
-<?php $this->widget('CLinkPager', array(
-    'pages' => $pages,
-)) ?>
-<?php 
+<?php
+/*
+	$this->widget('application.widgets.AjaxLinkPager', array(
+			'pages'=>$pages,
+	));
+	$this->widget('CLinkPager', array(
+			'pages'=>$pages,
+	));
+*/
+	$this->widget('AjaxLinkTipPager', array(
+    'pages' => $pages,)) ;
 }
 else 
 	echo "No match found !!";
