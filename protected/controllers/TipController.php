@@ -118,6 +118,10 @@ class TipController extends Controller
 	{
 		$dayOption = $_POST['dayOption'];
 		$dayChoose = "";
+		
+		if($dayOption == "")
+			return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
+		
 		if($dayOption == "tomorrow")
 		{
 			$numDayBeforeToday = 1;
@@ -125,15 +129,11 @@ class TipController extends Controller
 		}
 		elseif ($dayOption == "today")
 			$dayChoose  = date('Y-m-d');
-		else 
-			$dayChoose  = $dayOption;
+		elseif (($dayOption == "all"))
+			$dayChoose  = "";
 		
-		if($dayChoose == "")
-			$matches = array();
-		else 
-			$matches  = MatchFootball::model()->findAll(array(
+		$matches  = MatchFootball::model()->findAll(array(
 				'condition' => "t.time_match LIKE '%".$dayChoose."%'",));
-		
 		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
 	}
 	

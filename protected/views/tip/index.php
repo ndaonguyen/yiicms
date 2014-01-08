@@ -8,7 +8,9 @@ $this->pageTitle=Yii::app()->name;
 
 <div style="width: 40%">
 	<div id="option" style="float: left; width: 40%">
-		<span><?php echo CHtml::radioButtonList("matchDayOption","today",array('today'    =>'Today',
+		<span><?php echo CHtml::radioButtonList("matchDayOption","today",array(
+																		   'all'      =>'All Days (not recommend)',
+																		   'today'    =>'Today',
 																		   'tomorrow' =>'Tomorrow',
 																		   ),
 												array(
@@ -33,9 +35,10 @@ $this->pageTitle=Yii::app()->name;
 																	document.getElementById("upCommingOption").style.visibility="visible";
 																}
 																')); ?></span>
-																
-		<span id="historyOption" style="visibility: hidden; "> 
-			<div style="padding-top: 10px">
+								
+		<div style="padding-top: 10px">								
+			<span id="historyOption" style="visibility: hidden; "> 
+			
 				<?php echo CHtml::dropDownList('history', '', $historyArray,
 												array(
 												'empty' => 'Select a date',
@@ -44,8 +47,8 @@ $this->pageTitle=Yii::app()->name;
 													'data'    => array('dayOption'=>'js:this.value'),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',))));?>
-				
-				<span id="upCommingOption" style="visibility: hidden"> 
+			</span>
+			<span id="upCommingOption" style="visibility: hidden"> 
 					<?php echo CHtml::dropDownList("upcomming", '', $upcommingArray,
 													array(
 												'empty' => 'Select a date',
@@ -54,10 +57,8 @@ $this->pageTitle=Yii::app()->name;
 													'data'    => array('dayOption'=>'js:this.value'),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',)))) ?>
-				</span>
-			</div>
-		</span>
-		
+			</span>
+		</div>
 		
 	</div>
 	
@@ -68,7 +69,12 @@ $this->pageTitle=Yii::app()->name;
         								CHtml::normalizeUrl(array('tip/search')),
         								array(
 											'type'    => 'POST',
-											'data'    => array('term'=>'js:document.getElementById("idSearch").value'),
+											'data'    => array(
+															'term'            => 'js:document.getElementById("idSearch").value',
+															'time'            => 'js:document.getElementById("matchDayOption").value',
+												//			'historyOption'   => 'js:document.getElementById("historyOption").value',
+												//			'upCommingOption' => 'js:document.getElementById("upCommingOption").value'
+															 ),
 											'url'     => CController::createUrl('tip/search'),
 											'update'  => '#datafilter')); ?>
 		</span>
