@@ -128,7 +128,10 @@ class TipController extends Controller
 		else 
 			$dayChoose  = $dayOption;
 		
-		$matches  = MatchFootball::model()->findAll(array(
+		if($dayChoose == "")
+			$matches = array();
+		else 
+			$matches  = MatchFootball::model()->findAll(array(
 				'condition' => "t.time_match LIKE '%".$dayChoose."%'",));
 		
 		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);

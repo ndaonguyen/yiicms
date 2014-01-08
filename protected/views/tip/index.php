@@ -38,6 +38,7 @@ $this->pageTitle=Yii::app()->name;
 			<div style="padding-top: 10px">
 				<?php echo CHtml::dropDownList('history', '', $historyArray,
 												array(
+												'empty' => 'Select a date',
 												'onChange'    => CHtml::ajax(array(
 													'type'    => 'POST',
 													'data'    => array('dayOption'=>'js:this.value'),
@@ -47,6 +48,7 @@ $this->pageTitle=Yii::app()->name;
 				<span id="upCommingOption" style="visibility: hidden"> 
 					<?php echo CHtml::dropDownList("upcomming", '', $upcommingArray,
 													array(
+												'empty' => 'Select a date',
 												'onChange'    => CHtml::ajax(array(
 													'type'    => 'POST',
 													'data'    => array('dayOption'=>'js:this.value'),
