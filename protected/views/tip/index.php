@@ -71,9 +71,9 @@ $this->pageTitle=Yii::app()->name;
 											'type'    => 'POST',
 											'data'    => array(
 															'term'            => 'js:document.getElementById("idSearch").value',
-															'time'            => 'js:document.getElementById("matchDayOption").value',
-												//			'historyOption'   => 'js:document.getElementById("historyOption").value',
-												//			'upCommingOption' => 'js:document.getElementById("upCommingOption").value'
+															'time'            => 'js:$("input:radio[name=\'matchDayOption\']:checked").val()',
+															'historyOption'   => 'js:(document.getElementById("history")).options[(document.getElementById("history")).selectedIndex].value',
+															'upCommingOption' => 'js:(document.getElementById("upcomming")).options[(document.getElementById("upcomming")).selectedIndex].value'
 															 ),
 											'url'     => CController::createUrl('tip/search'),
 											'update'  => '#datafilter')); ?>
