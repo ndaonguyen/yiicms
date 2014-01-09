@@ -1,5 +1,6 @@
 <?php
 require_once($path = Yii::app()->basePath."/models/Team.php");
+require_once($path = Yii::app()->basePath."/models/Tip.php");
 require_once($path = Yii::app()->basePath."/utilities/Utility.php");
 require_once($path = Yii::app()->basePath."/utilities/Conf.php");
 
@@ -53,7 +54,6 @@ class TipController extends Controller
 			$tip_who   = Tip_who::model()->findByPk($tipUpdate->tip_who_id);
 			$tip_who_str = $tip_who->name;
 			
-			
 			echo CJSON::encode(array(
 					'status'=>'success',
 					'tipId' =>$tipUpdate->id,
@@ -81,38 +81,36 @@ class TipController extends Controller
 	
 	public function actionIndex()
 	{
-		try 
+		try {
+		$today   = (string)date('Y-m-d');
+		$matches = MatchFootball::model()->findAll(array(
+													    'condition' => "t.time_match LIKE '%".$today."%'",
+													));
+		$historyDay  = Conf::$numHistoryDay;
+		$historyArray = array();
+		for($i = 1; $i <= $historyDay; $i++)
 		{
-			$today   = date('Y-m-d');
-			$matches = MatchFootball::model()->findAll(array(
-														    'condition' => "t.time_match LIKE '%".$today."%'",
-														));
-			$historyDay  = Conf::$numHistoryDay;
-			$historyArray = array();
-			for($i = 1; $i <= $historyDay; $i++)
-			{
-				$dayInsertShow  = date('d/m/Y', strtotime("-".$i." days"));
-				$dayInsertValue = date('Y-m-d', strtotime("-".$i." days"));
-				$historyArray[$dayInsertValue] = $dayInsertShow;
-			}
-			
-			$upcommingDay  = Conf::$numUpCommingDay;
-			$upArray = array();
-			for($i = 2; $i <= $upcommingDay; $i++)
-			{
-				$dayInsertShow  = date('d/m/Y', strtotime("+".$i." days"));
-				$dayInsertValue = date('Y-m-d', strtotime("+".$i." days"));
-				$upArray[$dayInsertValue] = $dayInsertShow;
-			}
-			
-			$this->render('index', array("matches"=>$matches, "historyArray"=>$historyArray, "upcommingArray"=>$upArray));
+			$dayInsertShow  = date('d/m/Y', strtotime("-".$i." days"));
+			$dayInsertValue = date('Y-m-d', strtotime("-".$i." days"));
+			$historyArray[$dayInsertValue] = $dayInsertShow;
+		}
+		
+		$upcommingDay  = Conf::$numUpCommingDay;
+		$upArray = array();
+		for($i = 2; $i <= $upcommingDay; $i++)
+		{
+			$dayInsertShow  = date('d/m/Y', strtotime("+".$i." days"));
+			$dayInsertValue = date('Y-m-d', strtotime("+".$i." days"));
+			$upArray[$dayInsertValue] = $dayInsertShow;
+		}
+		
+		$this->render('index', array("matches"=>$matches, "historyArray"=>$historyArray, "upcommingArray"=>$upArray));
 		}
 		catch (Exception $e)
 		{
 			echo $e;
 		}
 	}
-	
 	
 	public function actionFilter()
 	{
@@ -173,27 +171,6 @@ class TipController extends Controller
 								") AND (".$matchTimeCon.")"));
 	
 		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
-	}
-	
-	public function getConditionStrOfTeamByTerm($term)
-	{
-		$teams  = Team::model()->findAll(array(
-				'condition' => "t.name LIKE '%".$term."%'"));
-		
-		$countTeam      = count($teams);
-		if($countTeam == 0)
-			return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
-			
-		$inConditionStr = "(";
-		for($i = 0; $i<$countTeam; $i++)
-		{
-		$inConditionStr = $inConditionStr.$teams[$i]->id;
-		if($i != ($countTeam-1) )
-			$inConditionStr = $inConditionStr.",";
-		}
-		$inConditionStr = $inConditionStr.")";
-		
-		return $inConditionStr;
 	}
 	
 	public function actionDelete()
@@ -274,5 +251,25 @@ class TipController extends Controller
 		return $tipActiveId;
 	}
 
+	public function getConditionStrOfTeamByTerm($term)
+	{
+		$teams  = Team::model()->findAll(array(
+				'condition' => "t.name LIKE '%".$term."%'"));
+	
+		$countTeam      = count($teams);
+		if($countTeam == 0)
+			return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
+			
+		$inConditionStr = "(";
+		for($i = 0; $i<$countTeam; $i++)
+		{
+		$inConditionStr = $inConditionStr.$teams[$i]->id;
+		if($i != ($countTeam-1) )
+			$inConditionStr = $inConditionStr.",";
+		}
+		$inConditionStr = $inConditionStr.")";
+	
+				return $inConditionStr;
+	}
 
 }

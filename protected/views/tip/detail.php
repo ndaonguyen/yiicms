@@ -90,7 +90,7 @@ $this->pageTitle=Yii::app()->name;
 		</div>
 	
 		<div class="row">
-			<?php echo $form->labelEx($model,'tip_who_id'); ?>
+			<?php echo $form->labelEx($model,'Tip from'); ?>
 			<?php echo $form->dropDownList($model,'tip_who_id',  CHtml::listData(Tip_who::model()->findAll(), 'id', 'name')); ?>
 			<?php echo $form->error($model,'tip_who_id'); ?>
 		</div>

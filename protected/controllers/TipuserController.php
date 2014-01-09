@@ -1,4 +1,5 @@
 <?php
+require_once($path = Yii::app()->basePath."/models/Tip_who.php");
 
 class TipuserController extends Controller
 {
@@ -20,8 +21,14 @@ class TipuserController extends Controller
 	
 	public function actionIndex()
 	{
+		try {
 		$tip_users = Tip_who::model()->findAll();
 		$this->render('index', array("tip_users"=>$tip_users));
+		}
+		catch(Exception $e)
+		{
+			echo $e;
+		}
 	}
 	
 	public function actionAdd()
