@@ -16,7 +16,9 @@ $this->pageTitle=Yii::app()->name;
 												array(
 												'onChange'    => CHtml::ajax(array(
 													'type'    => 'POST',
-													'data'    => array('dayOption'=>'js:this.value'),
+													'data'    => array(
+																		'dayOption'=> 'js:this.value',
+																		'term'     => 'js:document.getElementById("idSearch").value',),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',)))); ?></span><br>
 		<span><?php echo CHtml::radioButtonList("matchDayOption","",array(
@@ -44,7 +46,8 @@ $this->pageTitle=Yii::app()->name;
 												'empty' => 'Select a date',
 												'onChange'    => CHtml::ajax(array(
 													'type'    => 'POST',
-													'data'    => array('dayOption'=>'js:this.value'),
+													'data'    => array('dayOption'=> 'js:this.value',
+																	   'term'     => 'js:document.getElementById("idSearch").value',),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',))));?>
 			</span>
@@ -54,7 +57,8 @@ $this->pageTitle=Yii::app()->name;
 												'empty' => 'Select a date',
 												'onChange'    => CHtml::ajax(array(
 													'type'    => 'POST',
-													'data'    => array('dayOption'=>'js:this.value'),
+													'data'    => array('dayOption'=> 'js:this.value',
+																	   'term'     => 'js:document.getElementById("idSearch").value',),
 													'url'     => CController::createUrl('tip/filter'),
 													'update'  => '#datafilter',)))) ?>
 			</span>

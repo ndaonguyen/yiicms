@@ -117,6 +117,7 @@ class TipController extends Controller
 	public function actionFilter()
 	{
 		$dayOption = $_POST['dayOption'];
+		$term      = $_POST['term'];
 		$dayChoose = "";
 		
 		if($dayOption == "")
@@ -134,8 +135,10 @@ class TipController extends Controller
 		else 
 			$dayChoose  = $dayOption;
 		
-		$matches  = MatchFootball::model()->findAll(array(
-				'condition' => "t.time_match LIKE '%".$dayChoose."%'",));
+		$inConditionStr = $this->getConditionStrOfTeamByTerm($term);
+		$matches        = MatchFootball::model()->findAll(array(
+				'condition' => "(t.teamA_id IN ".$inConditionStr. " OR t.teamB_id IN ".$inConditionStr.
+								") AND (t.time_match LIKE '%".$dayChoose."%')",));
 		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
 	}
 	
@@ -146,6 +149,34 @@ class TipController extends Controller
 		$historyOption   = $_POST['historyOption'];
 		$upCommingOption = $_POST['upCommingOption'];
 		
+		$matchTimeCon = "";
+		if($time == "today" )
+			$matchTimeCon = "t.time_match LIKE '%".date('Y-m-d')."%'";
+		elseif ($time == "tomorrow")
+			$matchTimeCon = "t.time_match LIKE '%".date('Y-m-d', strtotime("+1 days"))."%'";
+		elseif ($time == "all")
+			$matchTimeCon = "t.time_match LIKE '%".""."%'";
+		elseif ($time == "history")
+			if($historyOption == "" )
+				return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
+			else
+				$matchTimeCon = "t.time_match LIKE '%".$historyOption."%'";
+		elseif ($time == "upcomming")
+			if($upCommingOption == "" )
+				return $this->renderPartial('filterMatches',array("matches"=>array()),false,true);
+			else
+				$matchTimeCon = "t.time_match LIKE '%".$upCommingOption."%'";
+		
+		$inConditionStr = $this->getConditionStrOfTeamByTerm($term);
+		$matches        = MatchFootball::model()->findAll(array(
+				'condition' => "(t.teamA_id IN ".$inConditionStr. " OR t.teamB_id IN ".$inConditionStr.
+								") AND (".$matchTimeCon.")"));
+	
+		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
+	}
+	
+	public function getConditionStrOfTeamByTerm($term)
+	{
 		$teams  = Team::model()->findAll(array(
 				'condition' => "t.name LIKE '%".$term."%'"));
 		
@@ -156,50 +187,14 @@ class TipController extends Controller
 		$inConditionStr = "(";
 		for($i = 0; $i<$countTeam; $i++)
 		{
-			$inConditionStr = $inConditionStr.$teams[$i]->id;
-			if($i != ($countTeam-1) )
-				$inConditionStr = $inConditionStr.",";
+		$inConditionStr = $inConditionStr.$teams[$i]->id;
+		if($i != ($countTeam-1) )
+			$inConditionStr = $inConditionStr.",";
 		}
 		$inConditionStr = $inConditionStr.")";
 		
-		$matchTimeCon = "";
-		if($time == "today" )
-			$matchTimeCon = "t.time_match LIKE '%".date('Y-m-d')."%'";
-		elseif ($time == "tomorrow")
-			$matchTimeCon = "t.time_match LIKE '%".date('Y-m-d', strtotime("+1 days"))."%'";
-		elseif ($time == "all")
-			$matchTimeCon = "t.time_match LIKE '%".""."%'";
-		elseif ($time == "history")
-		{
-			if($historyOption == "" )
-			{
-				$startHis     = date('Y-m-d', strtotime("-1 days"));
-				$endHis       = date('Y-m-d', strtotime("-".Conf::$numHistoryDay." days"));
-				$matchTimeCon = "STR_TO_DATE(t.time_match, '%Y-%m-%d') >= STR_TO_DATE('".$endHis."', '%Y-%m-%d')".
-							    " AND STR_TO_DATE(t.time_match, '%Y-%m-%d') <= STR_TO_DATE('".$startHis."', '%Y-%m-%d')";
-			}
-			else
-				$matchTimeCon = "t.time_match LIKE '%".$historyOption."%'";
-		}
-		elseif ($time == "upcomming")
-		{
-			if($upCommingOption == "" )
-			{
-				$endHis       = date('Y-m-d', strtotime("+1 days"));
-				$startHis     = date('Y-m-d', strtotime("+".Conf::$numUpCommingDay." days"));
-				$matchTimeCon = "STR_TO_DATE(t.time_match, '%Y-%m-%d') >= STR_TO_DATE('".$endHis."', '%Y-%m-%d')".
-							    " AND STR_TO_DATE(t.time_match, '%Y-%m-%d') <= STR_TO_DATE('".$startHis."', '%Y-%m-%d')"; 
-			}
-			else
-				$matchTimeCon = "t.time_match LIKE '%".$upCommingOption."%'";
-		}
-		$matches   = MatchFootball::model()->findAll(array(
-				'condition' => "(t.teamA_id IN ".$inConditionStr. " OR t.teamB_id IN ".$inConditionStr.
-								") AND (".$matchTimeCon.")"));
-	
-		$this->renderPartial('filterMatches',array("matches"=>$matches),false,true);
+		return $inConditionStr;
 	}
-	
 	
 	public function actionDelete()
 	{
