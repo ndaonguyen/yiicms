@@ -1,10 +1,12 @@
 <?php
-/* @var $this SiteController */
+Yii::app()->clientScript->registerMetaTag("2;url=?r=tip/index", null, 'refresh');
 
 $this->pageTitle=Yii::app()->name;
 $this->breadcrumbs=array('Today',);
 ?>
 
-<h1>Welcome to Today</h1>
+<h1>Read today data finished!!!</h1>
+ 
+ 
 
 

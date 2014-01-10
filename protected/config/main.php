@@ -41,7 +41,7 @@ return array(
 		'session' => array(
 				'autoStart'  => true,
 				'class'      => 'CDbHttpSession',
-				'timeout'    => 300,
+				'timeout'    => 600,
 				'cookieMode' =>'only',
 				'cookieParams' => array('secure' => false, 'httponly' => false),
 		),
@@ -72,7 +72,8 @@ return array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-		
+	*/
+		/*
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
 			'emulatePrepare' => true,
@@ -81,7 +82,7 @@ return array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-	*/
+		*/
 		'db'=>array(
 				'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
 				'emulatePrepare' => true,
@@ -90,6 +91,7 @@ return array(
 				'emulatePrepare' => true,
 				'charset' => 'utf8',
 		),
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

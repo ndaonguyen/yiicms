@@ -45,7 +45,6 @@ class DataController extends Controller
 			Utility::deleteDataTable("Tip");
 			Utility::deleteDataTable("Tip_who");
 			
-			echo "Delete Done";
 			$this->render('delete');
 		}
 		catch(Exception $e)
@@ -62,7 +61,7 @@ class DataController extends Controller
 		
 		$daysUrl = Utility::getDaysLiveURL(0, 0);
 		Utility::saveDaysRecordDb($daysUrl);
-		echo "Today Done";
+		
 		$this->render('today');
 	}
 	
@@ -74,7 +73,7 @@ class DataController extends Controller
 		
 		$daysUrl = Utility::getDaysLiveURL(Conf::$numReadHistory, 0);
 		Utility::saveDaysRecordDb($daysUrl);
-		echo "Last Days Done";
+		
 		$this->render('last');
 	}
 	
@@ -86,7 +85,7 @@ class DataController extends Controller
 		
 		$daysUrl = Utility::getDaysLiveURL(0, 10);
 		Utility::saveDaysRecordDb($daysUrl);
-		echo "Next Days Done";
+		
 		$this->render('next');
 	}
 	
@@ -99,7 +98,7 @@ class DataController extends Controller
 		
 		$daysUrl = Utility::getDaysLiveURL(Conf::$numReadHistory, Conf::$numUpCommingDay);
 		Utility::saveDaysRecordDb($daysUrl);
-		echo "All Days Done";
+		
 		$this->render('all');
 	}
 	

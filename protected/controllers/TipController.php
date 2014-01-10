@@ -1,4 +1,6 @@
 <?php
+require_once($path = Yii::app()->basePath."/utilities/Conf.php");
+
 class TipController extends Controller
 {
 	/**
