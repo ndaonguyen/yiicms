@@ -29,12 +29,19 @@ return array(
 		),
 		*/
 	),
-
+	
 	// application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+		),
+			
+		'session' => array(
+				'autoStart'  => true,
+				'timeout'    => 300,
+				'cookieMode' =>'only',
+				'cookieParams' => array('secure' => false, 'httponly' => false),
 		),
 		// uncomment the following to enable URLs in path-format
 		/*
@@ -68,7 +75,7 @@ return array(
 				'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
 				'emulatePrepare' => true,
 				'username' => 'root',
-				'password' => '',
+				'password' => 'root',
 				'emulatePrepare' => true,
 				'charset' => 'utf8',
 		),

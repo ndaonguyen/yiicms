@@ -14,6 +14,11 @@ require_once($path = Yii::app()->basePath."/models/Vote_result.php");
 
 class Utility
 {
+	public static function checkLoginState()
+	{
+		$isExist =  Yii::app()->session['login'];
+		return $isExist; // true or false
+	}
 	
 	public static function getOddsStr($oddInt) // odd over 20
 	{

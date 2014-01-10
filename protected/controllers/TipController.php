@@ -81,7 +81,6 @@ class TipController extends Controller
 	
 	public function actionIndex()
 	{
-		try {
 		$today   = (string)date('Y-m-d');
 		$matches = MatchFootball::model()->findAll(array(
 													    'condition' => "t.time_match LIKE '%".$today."%'",
@@ -104,12 +103,10 @@ class TipController extends Controller
 			$upArray[$dayInsertValue] = $dayInsertShow;
 		}
 		
+		$result = Utility::checkLoginState();
+		
 		$this->render('index', array("matches"=>$matches, "historyArray"=>$historyArray, "upcommingArray"=>$upArray));
-		}
-		catch (Exception $e)
-		{
-			echo $e;
-		}
+		
 	}
 	
 	public function actionFilter()

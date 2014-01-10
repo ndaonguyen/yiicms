@@ -2821,3 +2821,41 @@ REQUEST_URI=/yiiProject/index.php?r=tip/index
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (2)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/filterMatches.php (2)
 in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/views/tip/index.php (85)
+2014/01/09 06:09:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/var/folders/x1/4q6czd0s4xl9zzdpl8ldp0tw0000gn/T/#sql90e_1_0.MYI' (Errcode: 13). The SQL statement executed was: SHOW FULL COLUMNS FROM `member`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/SiteController.php (32)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 06:11:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/var/folders/x1/4q6czd0s4xl9zzdpl8ldp0tw0000gn/T/#sql90e_7_0.MYI' (Errcode: 13). The SQL statement executed was: SHOW FULL COLUMNS FROM `matchFootball`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 06:12:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/var/folders/x1/4q6czd0s4xl9zzdpl8ldp0tw0000gn/T/#sql9e9_4_0.MYI' (Errcode: 13). The SQL statement executed was: SHOW FULL COLUMNS FROM `matchFootball`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 06:12:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/var/folders/x1/4q6czd0s4xl9zzdpl8ldp0tw0000gn/T/#sql9e9_5_0.MYI' (Errcode: 13). The SQL statement executed was: SHOW FULL COLUMNS FROM `matchFootball`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 06:14:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1 Can't create/write to file '/var/folders/x1/4q6czd0s4xl9zzdpl8ldp0tw0000gn/T/#sql180_1_0.MYI' (Errcode: 13). The SQL statement executed was: SHOW FULL COLUMNS FROM `matchFootball`.
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipController.php (88)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 07:25:20 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (75)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 07:25:27 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (75)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 07:27:15 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/protected/controllers/TipuserController.php (39)
+in /Applications/XAMPP/xamppfiles/htdocs/yiiProject/index.php (13)
+2014/01/09 17:38:06 [error] [php] Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/yiiProject/protected/models/LoginForm.php:75) (/Applications/MAMP/htdocs/yiiProject/framework/web/CHttpRequest.php:803)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiiProject/protected/controllers/SiteController.php(96): SiteController->redirect()
+#1 /Applications/MAMP/htdocs/yiiProject/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /Applications/MAMP/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Applications/MAMP/htdocs/yiiProject/framework/web/CController.php(286): SiteController->runAction()
+#4 /Applications/MAMP/htdocs/yiiProject/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /Applications/MAMP/htdocs/yiiProject/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /Applications/MAMP/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Applications/MAMP/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Applications/MAMP/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=site/login
+in /Applications/MAMP/htdocs/yiiProject/protected/controllers/SiteController.php (96)
+in /Applications/MAMP/htdocs/yiiProject/index.php (13)
