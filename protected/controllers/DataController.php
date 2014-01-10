@@ -1,7 +1,4 @@
 <?php
-$path = Yii::app()->basePath."/utilities/Utility.php";
-include_once ($path);
-
 class DataController extends Controller
 {
 	/**
@@ -29,6 +26,10 @@ class DataController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
 		$this->render('index');
 	}
 	
@@ -53,59 +54,51 @@ class DataController extends Controller
 	
 	public function actionToday()
 	{
-		try {
-			$daysUrl = Utility::getDaysLiveURL(0, 0);
-			Utility::saveDaysRecordDb($daysUrl);
-			echo "Today Done";
-			$this->render('today');
-		}
-		catch(Exception $e)
-		{
-			echo $e;
-		}
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
+		$daysUrl = Utility::getDaysLiveURL(0, 0);
+		Utility::saveDaysRecordDb($daysUrl);
+		echo "Today Done";
+		$this->render('today');
 	}
 	
 	public function actionLastDays()
 	{
-		try {
-			$daysUrl = Utility::getDaysLiveURL(7, 0);
-			Utility::saveDaysRecordDb($daysUrl);
-			echo "Last Days Done";
-			$this->render('last');
-		}
-		catch(Exception $e)
-		{
-			echo $e;
-		}
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
+		$daysUrl = Utility::getDaysLiveURL(Conf::$numReadHistory, 0);
+		Utility::saveDaysRecordDb($daysUrl);
+		echo "Last Days Done";
+		$this->render('last');
 	}
 	
 	public function actionNextDays()
 	{
-		try {
-			$daysUrl = Utility::getDaysLiveURL(0, 10);
-			Utility::saveDaysRecordDb($daysUrl);
-			echo "Next Days Done";
-			$this->render('next');
-		}
-		catch(Exception $e)
-		{
-			echo $e;
-		}
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
+		$daysUrl = Utility::getDaysLiveURL(0, 10);
+		Utility::saveDaysRecordDb($daysUrl);
+		echo "Next Days Done";
+		$this->render('next');
 	}
 	
 	
 	public function actionAllDays()
 	{
-		try {
-			$daysUrl = Utility::getDaysLiveURL(7, 10);
-			Utility::saveDaysRecordDb($daysUrl);
-			echo "All Days Done";
-			$this->render('all');
-		}
-		catch(Exception $e)
-		{
-			echo $e;
-		}
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
+		$daysUrl = Utility::getDaysLiveURL(Conf::$numReadHistory, Conf::$numUpCommingDay);
+		Utility::saveDaysRecordDb($daysUrl);
+		echo "All Days Done";
+		$this->render('all');
 	}
 	
 

@@ -1,16 +1,4 @@
 <?php
-require_once($path = Yii::app()->basePath."/models/Country.php");
-require_once($path = Yii::app()->basePath."/models/Member.php");
-require_once($path = Yii::app()->basePath."/models/Team.php");
-require_once($path = Yii::app()->basePath."/models/Goal.php");
-require_once($path = Yii::app()->basePath."/models/League.php");
-require_once($path = Yii::app()->basePath."/models/MatchFootball.php");
-require_once($path = Yii::app()->basePath."/models/Tip.php");
-require_once($path = Yii::app()->basePath."/models/Tip_who.php");
-require_once($path = Yii::app()->basePath."/models/Favourite.php");
-require_once($path = Yii::app()->basePath."/models/Vote_result.php");
-//Yii::import("$path = Yii::app()->basePath.models.*");
-
 
 class Utility
 {

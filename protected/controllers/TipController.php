@@ -1,9 +1,4 @@
 <?php
-require_once($path = Yii::app()->basePath."/models/Team.php");
-require_once($path = Yii::app()->basePath."/models/Tip.php");
-require_once($path = Yii::app()->basePath."/utilities/Utility.php");
-require_once($path = Yii::app()->basePath."/utilities/Conf.php");
-
 class TipController extends Controller
 {
 	/**
@@ -81,6 +76,10 @@ class TipController extends Controller
 	
 	public function actionIndex()
 	{
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
 		$today   = (string)date('Y-m-d');
 		$matches = MatchFootball::model()->findAll(array(
 													    'condition' => "t.time_match LIKE '%".$today."%'",
@@ -103,10 +102,7 @@ class TipController extends Controller
 			$upArray[$dayInsertValue] = $dayInsertShow;
 		}
 		
-		$result = Utility::checkLoginState();
-		
 		$this->render('index', array("matches"=>$matches, "historyArray"=>$historyArray, "upcommingArray"=>$upArray));
-		
 	}
 	
 	public function actionFilter()
@@ -179,6 +175,10 @@ class TipController extends Controller
 	
 	public function actionDetail()
 	{
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
 		$matchId    = $_GET['id'];
 		$match      = MatchFootball::model()->findByPk($matchId);
 		$tips       = Tip::model()->findAllByAttributes(array("match_id"=>$matchId));

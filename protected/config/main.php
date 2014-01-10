@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.utilities.*',
 	),
 
 	'modules'=>array(
@@ -34,11 +35,12 @@ return array(
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
+			'allowAutoLogin'=>false,
 		),
 			
 		'session' => array(
 				'autoStart'  => true,
+				'class'      => 'CDbHttpSession',
 				'timeout'    => 300,
 				'cookieMode' =>'only',
 				'cookieParams' => array('secure' => false, 'httponly' => false),
@@ -61,7 +63,6 @@ return array(
 		),
 	*/
 		// uncomment the following to use a MySQL database
-/*
 		'db'=>array(
 			'connectionString' => 'mysql:host=50.62.209.46; port=3306;dbname=soccer_tips',
 			'emulatePrepare' => true,
@@ -70,7 +71,8 @@ return array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-*/
+		
+	/*
 		'db'=>array(
 				'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
 				'emulatePrepare' => true,
@@ -79,7 +81,7 @@ return array(
 				'emulatePrepare' => true,
 				'charset' => 'utf8',
 		),
-		
+	*/	
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

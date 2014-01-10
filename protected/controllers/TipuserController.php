@@ -1,6 +1,4 @@
 <?php
-require_once($path = Yii::app()->basePath."/models/Tip_who.php");
-
 class TipuserController extends Controller
 {
 	/**
@@ -21,18 +19,21 @@ class TipuserController extends Controller
 	
 	public function actionIndex()
 	{
-		try {
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
 		$tip_users = Tip_who::model()->findAll();
 		$this->render('index', array("tip_users"=>$tip_users));
-		}
-		catch(Exception $e)
-		{
-			echo $e;
-		}
+		
 	}
 	
 	public function actionAdd()
 	{
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
 		$model = new TipuserForm;
 		if(isset($_POST['TipuserForm']))
 		{
@@ -67,6 +68,10 @@ class TipuserController extends Controller
 	
 	public function actionEdit()
 	{
+		$state = Utility::checkLoginState();
+		if($state == false)
+			$this->redirect("?r=site/login");
+		
 		$model     = new TipuserForm;
 		$idTipUser = $_GET['id'];
 		$tipUSer   = Tip_who::model()->findByPk($idTipUser);

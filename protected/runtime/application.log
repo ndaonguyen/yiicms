@@ -2859,3 +2859,9 @@ Stack trace:
 REQUEST_URI=/yiiProject/index.php?r=site/login
 in /Applications/MAMP/htdocs/yiiProject/protected/controllers/SiteController.php (96)
 in /Applications/MAMP/htdocs/yiiProject/index.php (13)
+2014/01/10 03:47:33 [error] [system.db.CDbCommand] Error in preparing SQL: DELETE FROM 'YiiSession' WHERE expire<:expire
+in /Applications/MAMP/htdocs/yiiProject/protected/controllers/SiteController.php (107)
+in /Applications/MAMP/htdocs/yiiProject/index.php (13)
+2014/01/10 03:47:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: YiiSession. The SQL statement executed was: DELETE FROM 'YiiSession' WHERE expire<:expire.
+in /Applications/MAMP/htdocs/yiiProject/protected/controllers/SiteController.php (107)
+in /Applications/MAMP/htdocs/yiiProject/index.php (13)
