@@ -42,6 +42,8 @@ class DataController extends Controller
 			Utility::deleteDataTable("Goal");
 			Utility::deleteDataTable("League");
 			Utility::deleteDataTable("Match");
+			Utility::deleteDataTable("Tip");
+			Utility::deleteDataTable("Tip_who");
 			
 			echo "Delete Done";
 			$this->render('delete');

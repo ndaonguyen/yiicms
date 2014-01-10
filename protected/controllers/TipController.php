@@ -95,7 +95,7 @@ class TipController extends Controller
 		
 		$upcommingDay  = Conf::$numUpCommingDay;
 		$upArray = array();
-		for($i = 2; $i <= $upcommingDay; $i++)
+		for($i = 1; $i <= $upcommingDay; $i++)
 		{
 			$dayInsertShow  = date('d/m/Y', strtotime("+".$i." days"));
 			$dayInsertValue = date('Y-m-d', strtotime("+".$i." days"));

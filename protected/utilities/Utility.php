@@ -64,6 +64,18 @@ class Utility
 			foreach ($matches as $match)
 				MatchFootball::model()->deleteByPk($match->id);
 		}
+		elseif($modelStr == "Tip")
+		{
+			$tips = Tip::model()->findAll();
+			foreach ($tips as $tip)
+				Tip::model()->deleteByPk($tip->id);
+		}
+		elseif($modelStr == "Tip_who")
+		{
+			$tip_whos = Tip_who::model()->findAll();
+			foreach ($tip_whos as $tip_who)
+				Tip_who::model()->deleteByPk($tip_who->id);
+		}
 		
 	}
 	

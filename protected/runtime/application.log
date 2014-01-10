@@ -2865,3 +2865,19 @@ in /Applications/MAMP/htdocs/yiiProject/index.php (13)
 2014/01/10 03:47:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: YiiSession. The SQL statement executed was: DELETE FROM 'YiiSession' WHERE expire<:expire.
 in /Applications/MAMP/htdocs/yiiProject/protected/controllers/SiteController.php (107)
 in /Applications/MAMP/htdocs/yiiProject/index.php (13)
+2014/01/10 08:50:57 [error] [php] Object of class Tip_who could not be converted to string (/Applications/MAMP/htdocs/yiiProject/protected/utilities/Utility.php:77)
+Stack trace:
+#0 /Applications/MAMP/htdocs/yiiProject/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Applications/MAMP/htdocs/yiiProject/framework/web/CController.php(286): DataController->runAction()
+#2 /Applications/MAMP/htdocs/yiiProject/framework/web/CController.php(265): DataController->runActionWithFilters()
+#3 /Applications/MAMP/htdocs/yiiProject/framework/web/CWebApplication.php(282): DataController->run()
+#4 /Applications/MAMP/htdocs/yiiProject/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Applications/MAMP/htdocs/yiiProject/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Applications/MAMP/htdocs/yiiProject/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiProject/index.php?r=data/deleteAll
+in /Applications/MAMP/htdocs/yiiProject/protected/utilities/Utility.php (77)
+in /Applications/MAMP/htdocs/yiiProject/protected/controllers/DataController.php (46)
+in /Applications/MAMP/htdocs/yiiProject/index.php (13)
+2014/01/10 08:55:19 [warning] [application] Failed to set unsafe attribute "other" of "TipuserForm".
+in /Applications/MAMP/htdocs/yiiProject/protected/controllers/TipuserController.php (40)
+in /Applications/MAMP/htdocs/yiiProject/index.php (13)

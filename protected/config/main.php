@@ -72,10 +72,9 @@ return array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-	*/	
-	/*
+		
 		'db'=>array(
-			'connectionString' => 'mysql:host=p3plcpnl0105.prod.phx3.secureserver.net; port=2083;dbname=soccer_tips',
+			'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
 			'emulatePrepare' => true,
 			'username' => 'soccer',
 			'password' => '28Dan39**',
