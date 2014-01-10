@@ -63,6 +63,7 @@ return array(
 		),
 	*/
 		// uncomment the following to use a MySQL database
+	/*
 		'db'=>array(
 			'connectionString' => 'mysql:host=50.62.209.46; port=3306;dbname=soccer_tips',
 			'emulatePrepare' => true,
@@ -71,8 +72,17 @@ return array(
 			'emulatePrepare' => true,
 			'charset' => 'utf8',
 		),
-		
+	*/	
 	/*
+		'db'=>array(
+			'connectionString' => 'mysql:host=p3plcpnl0105.prod.phx3.secureserver.net; port=2083;dbname=soccer_tips',
+			'emulatePrepare' => true,
+			'username' => 'soccer',
+			'password' => '28Dan39**',
+			'emulatePrepare' => true,
+			'charset' => 'utf8',
+		),
+	*/
 		'db'=>array(
 				'connectionString' => 'mysql:host=localhost;dbname=soccer_tips',
 				'emulatePrepare' => true,
@@ -81,7 +91,6 @@ return array(
 				'emulatePrepare' => true,
 				'charset' => 'utf8',
 		),
-	*/	
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
