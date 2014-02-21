@@ -41,7 +41,7 @@ return array(
 		'session' => array(
 				'autoStart'  => true,
 				'class'      => 'CDbHttpSession',
-				'timeout'    => 600,
+				'timeout'    => 900,
 				'cookieMode' =>'only',
 				'cookieParams' => array('secure' => false, 'httponly' => false),
 		),
@@ -91,7 +91,6 @@ return array(
 				'emulatePrepare' => true,
 				'charset' => 'utf8',
 		),
-
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

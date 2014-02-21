@@ -262,13 +262,12 @@ class TipController extends Controller
 		$inConditionStr = "(";
 		for($i = 0; $i<$countTeam; $i++)
 		{
-		$inConditionStr = $inConditionStr.$teams[$i]->id;
-		if($i != ($countTeam-1) )
-			$inConditionStr = $inConditionStr.",";
+			$inConditionStr = $inConditionStr.$teams[$i]->id;
+			if($i != ($countTeam-1) )
+				$inConditionStr = $inConditionStr.",";
 		}
 		$inConditionStr = $inConditionStr.")";
-	
-				return $inConditionStr;
+		return $inConditionStr;
 	}
 
 }
